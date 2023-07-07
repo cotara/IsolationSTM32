@@ -14,7 +14,8 @@
 int32_t actualVoltage=0;
 int32_t actualCurrent=0;
 int16_t ustVoltage=500;
-double regKoef = 0.1;
+double regKoefCur = 0.5;
+double regKoef = 0.05;
 double CCR, minCCR,maxCCR = 9000000/PWM_FREQ;
 int32_t maxCurrent=250;                                                         //25 mkA*10
 double err;
@@ -115,7 +116,7 @@ uint8_t gerAdress(){
 void regulatorAct(){
   
   if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
-    err = regKoef*(maxCurrent-actualCurrent);
+    err = regKoefCur*(maxCurrent-actualCurrent);
   else
     err = regKoef*(ustVoltage-actualVoltage);
   
