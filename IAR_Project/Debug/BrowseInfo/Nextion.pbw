@@ -119578,27 +119578,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@82@macro@HIGH_VOL_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "HIGH_VOL_REG",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
-    },
-    "name": "HIGH_VOL_REG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:modbus.h@109@macro@ACTUAL_VOLTAGE_REG",
+    "ID": "c:modbus.h@82@macro@ACTUAL_VOLTAGE_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ACTUAL_VOLTAGE_REG",
     "location": {
       "column": "9",
-      "line": "7",
+      "line": "6",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "ACTUAL_VOLTAGE_REG",
@@ -119606,13 +119592,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@142@macro@ACTUAL_CURR_REG",
+    "ID": "c:modbus.h@115@macro@ACTUAL_CURR_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ACTUAL_CURR_REG",
     "location": {
       "column": "9",
-      "line": "8",
+      "line": "7",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "ACTUAL_CURR_REG",
@@ -119620,16 +119606,30 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@172@macro@DEFECTS_REG",
+    "ID": "c:modbus.h@145@macro@DEFECTS_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFECTS_REG",
     "location": {
       "column": "9",
-      "line": "9",
+      "line": "8",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "DEFECTS_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@171@macro@HIGH_VOL_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HIGH_VOL_REG",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "HIGH_VOL_REG",
     "origin": "user_include",
     "scope": null
   },
@@ -122390,7 +122390,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "70",
+      "line": "69",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122404,7 +122404,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "96",
+      "line": "95",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122412,13 +122412,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2006@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@2024@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "97",
+      "line": "96",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122426,13 +122426,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2385@F@gerAdress@pin0",
+    "ID": "c:main.c@2403@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "106",
+      "line": "105",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122440,13 +122440,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2385@F@gerAdress@pin1",
+    "ID": "c:main.c@2403@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "106",
+      "line": "105",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122454,13 +122454,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2385@F@gerAdress@pin2",
+    "ID": "c:main.c@2403@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "106",
+      "line": "105",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122468,13 +122468,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2385@F@gerAdress@pin3",
+    "ID": "c:main.c@2403@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "106",
+      "line": "105",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122488,7 +122488,7 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "116",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",

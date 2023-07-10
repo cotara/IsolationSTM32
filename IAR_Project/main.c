@@ -14,8 +14,8 @@
 int32_t actualVoltage=0;
 int32_t actualCurrent=0;
 int16_t ustVoltage=500;
-double regKoefCur = 0.5;
-double regKoef = 0.05;
+double regKoefCur = 0.6;
+double regKoef = 0.06;
 double CCR, minCCR,maxCCR = 9000000/PWM_FREQ;
 int32_t maxCurrent=250;                                                         //25 mkA*10
 double err;
@@ -59,12 +59,11 @@ int main()
 
 void updateVoltage(double val){
     actualVoltage =(int32_t)(val*1.1505);
-    if(actualVoltage>0)
+    if(getReg(HIGH_VOL_REG) || actualVoltage>0)
       HV_LED_ON;
     else
       HV_LED_OFF;
     setReg(actualVoltage,ACTUAL_VOLTAGE_REG);
-    
 }
 
 void updateCurrent(double val){

@@ -3,10 +3,10 @@
 #define REG_SIZE 9
 
 #define TYPE_MODEL_REG 0x00
-#define HIGH_VOL_REG 0x01
-#define ACTUAL_VOLTAGE_REG 0x02
-#define ACTUAL_CURR_REG 0x03
-#define DEFECTS_REG 0x04
+#define ACTUAL_VOLTAGE_REG 0x01
+#define ACTUAL_CURR_REG 0x02
+#define DEFECTS_REG 0x03
+#define HIGH_VOL_REG 0x04
 #define UST_VOLTAGE_REG 0x05
 #define UST_CURR_REG 0x06
 #define UST_LEN_REG 0x07

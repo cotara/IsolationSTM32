@@ -19,7 +19,7 @@ void modbusInit(uint8_t add){
   regs[1]=0;
   regs[2]=0;
   regs[3]=0;
-  regs[4]=0;
+  regs[4]=1;
   regs[5]=350;
   regs[6]=200;
   regs[7]=100;  
