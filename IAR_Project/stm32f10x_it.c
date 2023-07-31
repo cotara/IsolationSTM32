@@ -12,7 +12,6 @@
 
 extern volatile uint8_t   tx_buffer[TX_BUF_SIZE];
 extern volatile unsigned long  tx_wr_index,tx_rd_index,tx_counter;
-extern uint16_t PWM_period;
 uint32_t dmaVoltageCounter=0,vel_adc=0;
 uint32_t adcVoltageSum=0,adcVoltageSample=940,adcVoltageCounter=0;
 uint32_t adcCurrentSum=0,adcCurrentSample=940,adcCurrentCounter=0;
@@ -63,7 +62,6 @@ void TIM3_IRQHandler(void){
 //Regulator
 void TIM4_IRQHandler(void){
     TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
-    //TIM3->ARR = PWM_period;
     regulatorAct();
 }
 

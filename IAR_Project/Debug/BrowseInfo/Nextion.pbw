@@ -122376,7 +122376,7 @@
     "display": "void updateVoltage(double)",
     "location": {
       "column": "6",
-      "line": "60",
+      "line": "61",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateVoltage",
@@ -122390,7 +122390,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "69",
+      "line": "70",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122404,7 +122404,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "95",
+      "line": "105",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122412,13 +122412,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2024@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@2503@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "96",
+      "line": "106",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122426,13 +122426,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2403@F@gerAdress@pin0",
+    "ID": "c:main.c@2882@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "105",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122440,13 +122440,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2403@F@gerAdress@pin1",
+    "ID": "c:main.c@2882@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "105",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122454,13 +122454,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2403@F@gerAdress@pin2",
+    "ID": "c:main.c@2882@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "105",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122468,13 +122468,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2403@F@gerAdress@pin3",
+    "ID": "c:main.c@2882@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "105",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122488,11 +122488,95 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "115",
+      "line": "125",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -122646,90 +122730,6 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
     },
     "name": "lldiv",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
     "origin": "system_include",
     "scope": null
   },
@@ -123566,27 +123566,13 @@
     "scope": null
   },
   {
-    "ID": "c:@PWM_period",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "PWM_period",
-    "location": {
-      "column": "17",
-      "line": "15",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "PWM_period",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@dmaVoltageCounter",
     "What": "Variable",
     "defdec": "Def",
     "display": "dmaVoltageCounter",
     "location": {
       "column": "10",
-      "line": "16",
+      "line": "15",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "dmaVoltageCounter",
@@ -123600,7 +123586,7 @@
     "display": "vel_adc",
     "location": {
       "column": "30",
-      "line": "16",
+      "line": "15",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "vel_adc",
@@ -123614,7 +123600,7 @@
     "display": "adcVoltageSum",
     "location": {
       "column": "10",
-      "line": "17",
+      "line": "16",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcVoltageSum",
@@ -123628,7 +123614,7 @@
     "display": "adcVoltageSample",
     "location": {
       "column": "26",
-      "line": "17",
+      "line": "16",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcVoltageSample",
@@ -123642,7 +123628,7 @@
     "display": "adcVoltageCounter",
     "location": {
       "column": "47",
-      "line": "17",
+      "line": "16",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcVoltageCounter",
@@ -123656,7 +123642,7 @@
     "display": "adcCurrentSum",
     "location": {
       "column": "10",
-      "line": "18",
+      "line": "17",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcCurrentSum",
@@ -123670,7 +123656,7 @@
     "display": "adcCurrentSample",
     "location": {
       "column": "26",
-      "line": "18",
+      "line": "17",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcCurrentSample",
@@ -123684,7 +123670,7 @@
     "display": "adcCurrentCounter",
     "location": {
       "column": "47",
-      "line": "18",
+      "line": "17",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "adcCurrentCounter",
@@ -123698,7 +123684,7 @@
     "display": "currentBuf",
     "location": {
       "column": "9",
-      "line": "19",
+      "line": "18",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "currentBuf",
@@ -123712,7 +123698,7 @@
     "display": "ADC1ConvertedValue",
     "location": {
       "column": "17",
-      "line": "20",
+      "line": "19",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "ADC1ConvertedValue",
@@ -123726,7 +123712,7 @@
     "display": "ADC3ConvertedValue",
     "location": {
       "column": "36",
-      "line": "20",
+      "line": "19",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "ADC3ConvertedValue",
@@ -123740,7 +123726,7 @@
     "display": "voltageADCValue",
     "location": {
       "column": "8",
-      "line": "21",
+      "line": "20",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "voltageADCValue",
@@ -123754,7 +123740,7 @@
     "display": "currentADCValue",
     "location": {
       "column": "24",
-      "line": "21",
+      "line": "20",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "currentADCValue",
@@ -123768,7 +123754,7 @@
     "display": "ms_counter",
     "location": {
       "column": "10",
-      "line": "22",
+      "line": "21",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "ms_counter",
@@ -123782,7 +123768,7 @@
     "display": "tempCounter",
     "location": {
       "column": "10",
-      "line": "24",
+      "line": "23",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "tempCounter",
@@ -123796,7 +123782,7 @@
     "display": "void HardFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "26",
+      "line": "25",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "HardFault_Handler",
@@ -123810,7 +123796,7 @@
     "display": "void MemManage_Handler(void)",
     "location": {
       "column": "6",
-      "line": "31",
+      "line": "30",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "MemManage_Handler",
@@ -123824,7 +123810,7 @@
     "display": "void BusFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "36",
+      "line": "35",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "BusFault_Handler",
@@ -123838,7 +123824,7 @@
     "display": "void SysTick_Handler(void)",
     "location": {
       "column": "6",
-      "line": "42",
+      "line": "41",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "SysTick_Handler",
@@ -123852,7 +123838,7 @@
     "display": "void TIM2_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "51",
+      "line": "50",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM2_IRQHandler",
@@ -123866,7 +123852,7 @@
     "display": "void TIM3_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "58",
+      "line": "57",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM3_IRQHandler",
@@ -123880,7 +123866,7 @@
     "display": "void TIM4_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "64",
+      "line": "63",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM4_IRQHandler",
@@ -123894,7 +123880,7 @@
     "display": "void DMA1_Channel1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "71",
+      "line": "69",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "DMA1_Channel1_IRQHandler",
@@ -123908,7 +123894,7 @@
     "display": "void DMA2_Channel4_5_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "87",
+      "line": "85",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "DMA2_Channel4_5_IRQHandler",
@@ -123922,7 +123908,7 @@
     "display": "void USART1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "102",
+      "line": "100",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "USART1_IRQHandler",

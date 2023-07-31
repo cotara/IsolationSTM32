@@ -54,11 +54,12 @@ int main()
   
   while(1){
       ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);
+    
   }
 }
 
 void updateVoltage(double val){
-    actualVoltage =(int32_t)(val*1.1505);
+    actualVoltage =(int32_t)(val*1.5464 + 75);
     if(getReg(HIGH_VOL_REG) || actualVoltage>0)
       HV_LED_ON;
     else
@@ -67,8 +68,13 @@ void updateVoltage(double val){
 }
 
 void updateCurrent(double val){
-    actualCurrent =(int32_t)(val/18.57);
-    setReg(actualCurrent,ACTUAL_CURR_REG);
+     //setReg(val,ACTUAL_CURR_REG);
+  
+    if(val<1200)                                                                //Before 1000v
+      actualCurrent =(int32_t)(0.1167*val-40);
+    else
+      actualCurrent =(int32_t)(0.0708*val+15.1);
+   setReg(actualCurrent,ACTUAL_CURR_REG);
     
     if( actualCurrent>getReg(UST_CURR_REG) ){
       PROBOY_LED_ON;
@@ -109,11 +115,12 @@ uint8_t gerAdress(){
   pin2 = GPIO_ReadInputDataBit (GPIOD, GPIO_Pin_2);
   pin3 = GPIO_ReadInputDataBit (GPIOD, GPIO_Pin_3);
   
-  return pin0*8 + pin1*4 +  pin2*2 + pin3;
+  return 0x0f-(pin0*8 + pin1*4 +  pin2*2 + pin3);
 }
 
 void regulatorAct(){
-  
+  if(ustVoltage==0)
+    CCR=maxCCR;
   if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
     err = regKoefCur*(maxCurrent-actualCurrent);
   else
