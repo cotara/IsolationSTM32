@@ -19,4 +19,5 @@ C:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_TIMER.pbi: \
   C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h \
   C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h \
   C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h \
-  C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
+  C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h \
+  C:\Ruslan\IAR\EX\IAR_Project\main.h

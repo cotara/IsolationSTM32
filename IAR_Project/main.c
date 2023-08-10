@@ -13,44 +13,56 @@
 
 int32_t actualVoltage=0;
 int32_t actualCurrent=0;
-int16_t ustVoltage=500;
+int16_t ustVoltage=0;
 double regKoefCur = 0.6;
 double regKoef = 0.06;
 double CCR, minCCR,maxCCR = 9000000/PWM_FREQ;
 int32_t maxCurrent=250;                                                         //25 mkA*10
-double err;
-uint8_t defectDetected = 0;
+double err;                                                                     //Рассогласование
+uint8_t defectDetected = 0;                                                     
 int32_t defectPos=0;
 extern int32_t position;
+extern uint8_t errorCounter;
 
 uint32_t counter__ = 0;
+uint8_t adress=0;
+
 int main()
 {    
   RCC_ClocksTypeDef RCC_Clocks;
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency /1000);
   
-
-  
-  minCCR = maxCCR*0.4;
-  CCR = maxCCR;
-  
-  uint8_t adress=0;
   GPIO_init();
+  
+  for (int i=0;i< 3;i++){
+    PROBOY_LED_ON;
+    Delay(100);
+    HV_LED_ON;
+    Delay(100);
+    PROBOY_LED_OFF;
+    Delay(100);
+    HV_LED_OFF;
+    Delay(100);
+  }
+  
+  minCCR = maxCCR*0.5;
+  CCR = maxCCR; 
+  
   tim3_pwm_init(PWM_FREQ);
- 
  
   Delay(20);
   
   adcVoltage_init();
   adcCurrent_init();
   
-   tim4_init(); 
+  tim4_init(); 
    
   adress=gerAdress();
   modbusInit(adress);
   tim2_init();
   usart_init();
+  tim5_init();                                                                  //Контроль обрыва связи
   
   while(1){
       ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);
@@ -59,22 +71,30 @@ int main()
 }
 
 void updateVoltage(double val){
-    actualVoltage =(int32_t)(val*1.5464 + 75);
-    if(getReg(HIGH_VOL_REG) || actualVoltage>0)
-      HV_LED_ON;
+    if(CCR == maxCCR)                                                           //Шим выключен
+      actualVoltage = 0;
     else
-      HV_LED_OFF;
+      actualVoltage =(int32_t)(val*1.5584 + 6.5);
+    if(errorCounter==0) {                                                        //Штатный режим(нет ошибки связи), без мигания
+      if(getReg(HIGH_VOL_REG) || actualVoltage>0)
+        HV_LED_ON;
+      else
+        HV_LED_OFF;
+    }
     setReg(actualVoltage,ACTUAL_VOLTAGE_REG);
+    //setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
 }
 
 void updateCurrent(double val){
-     //setReg(val,ACTUAL_CURR_REG);
-  
-    if(val<1200)                                                                //Before 1000v
-      actualCurrent =(int32_t)(0.1167*val-40);
+    if(val<637){                                                                //637 соответствует 4.37 мкА, что соответствует 437 В. То есть до 437В используем одну формулу, а потом другую
+      actualCurrent =(int32_t)(0.0768*val-4.5);
+      if(actualCurrent<0)       actualCurrent=0;
+    }
     else
-      actualCurrent =(int32_t)(0.0708*val+15.1);
-   setReg(actualCurrent,ACTUAL_CURR_REG);
+      actualCurrent =(int32_t)(0.0665*val+1.5);
+   
+    setReg(actualCurrent,ACTUAL_CURR_REG);
+    //setReg(val,ACTUAL_CURR_REG);                                             //Чтобы выводить тугрики для калибровки
     
     if( actualCurrent>getReg(UST_CURR_REG) ){
       PROBOY_LED_ON;

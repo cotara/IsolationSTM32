@@ -11,8 +11,7 @@ void GPIO_init(void)
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;		                        //Меандр 1 кГц
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;	
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;	
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
-         
+  GPIO_Init(GPIOB, &GPIO_InitStructure);     
 }
 
 

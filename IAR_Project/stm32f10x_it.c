@@ -2,6 +2,7 @@
 #include "stm32f10x_usart.h"
 #include "user_TIMER.h"
 #include "user_USART.h"
+#include "user_GPIO.h"
 #include "stm32f10x_tim.h"
 #include <stdlib.h>
 #include "stm32f10x_adc.h"
@@ -21,6 +22,8 @@ double voltageADCValue,currentADCValue;
 uint32_t ms_counter=0;
 
 uint32_t tempCounter=0;
+uint8_t errorCounter=0;
+
 
 void HardFault_Handler(void){
   while (1)
@@ -64,7 +67,18 @@ void TIM4_IRQHandler(void){
     TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
     regulatorAct();
 }
-
+//РћР‘СЂС‹РІ 485
+void TIM5_IRQHandler(void){
+    TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
+    
+    if(errorCounter>=10){
+        setReg(0,UST_VOLTAGE_REG);
+        setReg(0,HIGH_VOL_REG);
+        HV_LED_TOOGLE;
+    }
+    else
+      errorCounter++;
+}
 
 void DMA1_Channel1_IRQHandler(void){
   if((DMA_GetITStatus(DMA1_IT_TC1) == SET)){ 
@@ -102,6 +116,7 @@ void USART1_IRQHandler(void){
     TIM2->CNT = 0;
     TIM_Cmd(TIM2, ENABLE);
     toBuf(USART_ReceiveData(USART1));
+    errorCounter=0;
   }
 
   if(USART_GetITStatus(USART1, USART_IT_TXE) == SET) {                           //прерывание по передаче

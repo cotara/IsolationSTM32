@@ -119270,7 +119270,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@1782@F@modbus3@b_count",
+    "ID": "c:modbus.c@1780@F@modbus3@b_count",
     "What": "Variable",
     "defdec": "Def",
     "display": "b_count",
@@ -119312,7 +119312,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3077@F@modbus16@tempCount",
+    "ID": "c:modbus.c@3075@F@modbus16@tempCount",
     "What": "Variable",
     "defdec": "Def",
     "display": "tempCount",
@@ -119326,7 +119326,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3455@F@modbus16@countSet",
+    "ID": "c:modbus.c@3453@F@modbus16@countSet",
     "What": "Variable",
     "defdec": "Def",
     "display": "countSet",
@@ -119340,7 +119340,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3596@F@modbus16@i",
+    "ID": "c:modbus.c@3594@F@modbus16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -119368,7 +119368,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4059@F@crc16@crc",
+    "ID": "c:modbus.c@4057@F@crc16@crc",
     "What": "Variable",
     "defdec": "Def",
     "display": "crc",
@@ -119382,7 +119382,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4096@F@crc16@i",
+    "ID": "c:modbus.c@4094@F@crc16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -119396,7 +119396,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4151@F@crc16@j",
+    "ID": "c:modbus.c@4149@F@crc16@j",
     "What": "Variable",
     "defdec": "Def",
     "display": "j",
@@ -120320,13 +120320,27 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@191@macro@PROBOY_LED_OFF",
+    "ID": "c:user_GPIO.h@189@macro@HV_LED_TOOGLE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HV_LED_TOOGLE",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
+    },
+    "name": "HV_LED_TOOGLE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:user_GPIO.h@239@macro@PROBOY_LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_OFF",
     "location": {
       "column": "9",
-      "line": "6",
+      "line": "7",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "PROBOY_LED_OFF",
@@ -120334,13 +120348,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@301@macro@PROBOY_LED_ON",
+    "ID": "c:user_GPIO.h@349@macro@PROBOY_LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_ON",
     "location": {
       "column": "9",
-      "line": "7",
+      "line": "8",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "PROBOY_LED_ON",
@@ -120354,7 +120368,7 @@
     "display": "void GPIO_init(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "10",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "GPIO_init",
@@ -120368,7 +120382,7 @@
     "display": "void GPIO_init(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "10",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "GPIO_init",
@@ -120404,13 +120418,265 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Delay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay(volatile uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "Delay",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay(volatile uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "Delay",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TimingDelay_Decrement",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TimingDelay_Decrement(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "TimingDelay_Decrement",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TimingDelay_Decrement",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TimingDelay_Decrement(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "TimingDelay_Decrement",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim2_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim2_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim2_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim2_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_pwm_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_pwm_init(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_pwm_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_pwm_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_pwm_init(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_pwm_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_init(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_init(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@getCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t getCcr3Tim(void)",
+    "location": {
+      "column": "10",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "getCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@getCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t getCcr3Tim(void)",
+    "location": {
+      "column": "10",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "getCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@setCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void setCcr3Tim(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "setCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@setCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void setCcr3Tim(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "setCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim4_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim4_init(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim4_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim4_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim4_init(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim4_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim5_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim5_init(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim5_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim5_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim5_init(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim5_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@TimingDelay",
     "What": "Variable",
     "defdec": "Dec",
     "display": "TimingDelay",
     "location": {
       "column": "19",
-      "line": "4",
+      "line": "5",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TimingDelay",
@@ -120424,7 +120690,7 @@
     "display": "CCR1_Val",
     "location": {
       "column": "10",
-      "line": "5",
+      "line": "6",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "CCR1_Val",
@@ -120438,7 +120704,7 @@
     "display": "void tim2_init(void)",
     "location": {
       "column": "6",
-      "line": "7",
+      "line": "8",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "tim2_init",
@@ -120446,13 +120712,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@144@F@tim2_init@TIMER_InitStructure",
+    "ID": "c:user_TIMER.c@174@F@tim2_init@TIMER_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIMER_InitStructure",
     "location": {
       "column": "29",
-      "line": "8",
+      "line": "9",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TIMER_InitStructure",
@@ -120466,7 +120732,7 @@
     "display": "void tim3_init(void)",
     "location": {
       "column": "6",
-      "line": "25",
+      "line": "26",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "tim3_init",
@@ -120474,13 +120740,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@786@F@tim3_init@TIMER_InitStructure",
+    "ID": "c:user_TIMER.c@816@F@tim3_init@TIMER_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIMER_InitStructure",
     "location": {
       "column": "29",
-      "line": "26",
+      "line": "27",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TIMER_InitStructure",
@@ -120494,7 +120760,7 @@
     "display": "void tim3_pwm_init(uint16_t)",
     "location": {
       "column": "6",
-      "line": "41",
+      "line": "42",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "tim3_pwm_init",
@@ -120502,13 +120768,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@1441@F@tim3_pwm_init@TIM_OCInitStructure",
+    "ID": "c:user_TIMER.c@1471@F@tim3_pwm_init@TIM_OCInitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIM_OCInitStructure",
     "location": {
       "column": "22",
-      "line": "42",
+      "line": "43",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TIM_OCInitStructure",
@@ -120516,13 +120782,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@1484@F@tim3_pwm_init@GPIO_InitStructure",
+    "ID": "c:user_TIMER.c@1514@F@tim3_pwm_init@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "43",
+      "line": "44",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "GPIO_InitStructure",
@@ -120530,13 +120796,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@3078@F@tim3_pwm_init@TIMER_InitStructure",
+    "ID": "c:user_TIMER.c@2706@F@tim3_pwm_init@TIMER_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIMER_InitStructure",
     "location": {
       "column": "29",
-      "line": "75",
+      "line": "67",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TIMER_InitStructure",
@@ -120550,7 +120816,7 @@
     "display": "void setCcr3Tim(uint16_t)",
     "location": {
       "column": "6",
-      "line": "102",
+      "line": "106",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "setCcr3Tim",
@@ -120564,7 +120830,7 @@
     "display": "uint16_t getCcr3Tim(void)",
     "location": {
       "column": "10",
-      "line": "108",
+      "line": "112",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "getCcr3Tim",
@@ -120578,7 +120844,7 @@
     "display": "void tim4_init(void)",
     "location": {
       "column": "6",
-      "line": "113",
+      "line": "117",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "tim4_init",
@@ -120586,13 +120852,41 @@
     "scope": null
   },
   {
-    "ID": "c:user_TIMER.c@4168@F@tim4_init@TIMER_InitStructure",
+    "ID": "c:user_TIMER.c@4210@F@tim4_init@TIMER_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIMER_InitStructure",
     "location": {
       "column": "29",
-      "line": "114",
+      "line": "118",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
+    },
+    "name": "TIMER_InitStructure",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim5_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void tim5_init(void)",
+    "location": {
+      "column": "6",
+      "line": "134",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
+    },
+    "name": "tim5_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_TIMER.c@4887@F@tim5_init@TIMER_InitStructure",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "TIMER_InitStructure",
+    "location": {
+      "column": "29",
+      "line": "135",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TIMER_InitStructure",
@@ -120606,7 +120900,7 @@
     "display": "void Delay(volatile uint32_t)",
     "location": {
       "column": "6",
-      "line": "130",
+      "line": "150",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "Delay",
@@ -120620,7 +120914,7 @@
     "display": "void TimingDelay_Decrement(void)",
     "location": {
       "column": "6",
-      "line": "137",
+      "line": "157",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.c"
     },
     "name": "TimingDelay_Decrement",
@@ -120628,226 +120922,128 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Delay",
+    "ID": "c:main.h@8@macro@PWM_FREQ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PWM_FREQ",
+    "location": {
+      "column": "9",
+      "line": "1",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+    },
+    "name": "PWM_FREQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@updateVoltage",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Delay(volatile uint32_t)",
+    "display": "void updateVoltage(double)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+    },
+    "name": "updateVoltage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@updateVoltage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void updateVoltage(double)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+    },
+    "name": "updateVoltage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@updateCurrent",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
       "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "Delay",
+    "name": "updateCurrent",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@Delay",
+    "ID": "c:@F@updateCurrent",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Delay(volatile uint32_t)",
+    "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
       "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "Delay",
+    "name": "updateCurrent",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@TimingDelay_Decrement",
+    "ID": "c:@F@gerAdress",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void TimingDelay_Decrement(void)",
+    "display": "uint8_t gerAdress(void)",
     "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "TimingDelay_Decrement",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TimingDelay_Decrement",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void TimingDelay_Decrement(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "TimingDelay_Decrement",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim2_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim2_init(void)",
-    "location": {
-      "column": "6",
+      "column": "9",
       "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "tim2_init",
+    "name": "gerAdress",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@tim2_init",
+    "ID": "c:@F@gerAdress",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void tim2_init(void)",
+    "display": "uint8_t gerAdress(void)",
     "location": {
-      "column": "6",
+      "column": "9",
       "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "tim2_init",
+    "name": "gerAdress",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@tim3_pwm_init",
+    "ID": "c:@F@regulatorAct",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void tim3_pwm_init(uint16_t)",
+    "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
       "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "tim3_pwm_init",
+    "name": "regulatorAct",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@tim3_pwm_init",
+    "ID": "c:@F@regulatorAct",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void tim3_pwm_init(uint16_t)",
+    "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
       "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
-    "name": "tim3_pwm_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_init(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_init(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@getCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t getCcr3Tim(void)",
-    "location": {
-      "column": "10",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "getCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@getCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t getCcr3Tim(void)",
-    "location": {
-      "column": "10",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "getCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@setCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void setCcr3Tim(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "setCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@setCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void setCcr3Tim(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "setCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim4_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim4_init(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim4_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim4_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim4_init(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim4_init",
+    "name": "regulatorAct",
     "origin": "user_include",
     "scope": null
   },
@@ -122132,6 +122328,90 @@
     "scope": null
   },
   {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:@actualVoltage",
     "What": "Variable",
     "defdec": "Def",
@@ -122314,16 +122594,44 @@
     "scope": null
   },
   {
+    "ID": "c:@errorCounter",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "errorCounter",
+    "location": {
+      "column": "16",
+      "line": "25",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+    },
+    "name": "errorCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@counter__",
     "What": "Variable",
     "defdec": "Def",
     "display": "counter__",
     "location": {
       "column": "10",
-      "line": "26",
+      "line": "27",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "counter__",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adress",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adress",
+    "location": {
+      "column": "9",
+      "line": "28",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+    },
+    "name": "adress",
     "origin": "project_file",
     "scope": null
   },
@@ -122334,7 +122642,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "27",
+      "line": "30",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "main",
@@ -122342,13 +122650,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@675@F@main@RCC_Clocks",
+    "ID": "c:main.c@878@F@main@RCC_Clocks",
     "What": "Variable",
     "defdec": "Def",
     "display": "RCC_Clocks",
     "location": {
       "column": "21",
-      "line": "29",
+      "line": "32",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "RCC_Clocks",
@@ -122356,16 +122664,16 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@850@F@main@adress",
+    "ID": "c:main.c@1027@F@main@i",
     "What": "Variable",
     "defdec": "Def",
-    "display": "adress",
+    "display": "i",
     "location": {
-      "column": "11",
+      "column": "12",
       "line": "38",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
-    "name": "adress",
+    "name": "i",
     "origin": "project_file",
     "scope": null
   },
@@ -122376,7 +122684,7 @@
     "display": "void updateVoltage(double)",
     "location": {
       "column": "6",
-      "line": "61",
+      "line": "73",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateVoltage",
@@ -122390,7 +122698,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "70",
+      "line": "88",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122404,7 +122712,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "105",
+      "line": "121",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122412,13 +122720,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2503@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@3542@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "106",
+      "line": "122",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122426,13 +122734,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2882@F@gerAdress@pin0",
+    "ID": "c:main.c@3921@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "115",
+      "line": "131",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122440,13 +122748,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2882@F@gerAdress@pin1",
+    "ID": "c:main.c@3921@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "115",
+      "line": "131",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122454,13 +122762,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2882@F@gerAdress@pin2",
+    "ID": "c:main.c@3921@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "115",
+      "line": "131",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122468,13 +122776,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2882@F@gerAdress@pin3",
+    "ID": "c:main.c@3921@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "115",
+      "line": "131",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122488,95 +122796,11 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "125",
+      "line": "141",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",
     "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
     "scope": null
   },
   {
@@ -122734,129 +122958,647 @@
     "scope": null
   },
   {
-    "ID": "c:main.h@8@macro@PWM_FREQ",
+    "ID": "c:stm32f10x_it.h@1130@macro@__STM32F10x_IT_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "PWM_FREQ",
+    "display": "__STM32F10x_IT_H",
     "location": {
       "column": "9",
-      "line": "1",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "24",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
     },
-    "name": "PWM_FREQ",
+    "name": "__STM32F10x_IT_H",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@updateVoltage",
+    "ID": "c:@F@NMI_Handler",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void updateVoltage(double)",
+    "display": "void NMI_Handler(void)",
     "location": {
       "column": "6",
-      "line": "3",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "34",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
     },
-    "name": "updateVoltage",
+    "name": "NMI_Handler",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@updateVoltage",
+    "ID": "c:@F@HardFault_Handler",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void updateVoltage(double)",
+    "display": "void HardFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "3",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "35",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
     },
-    "name": "updateVoltage",
+    "name": "HardFault_Handler",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@updateCurrent",
+    "ID": "c:@F@MemManage_Handler",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void updateCurrent(double)",
+    "display": "void MemManage_Handler(void)",
     "location": {
       "column": "6",
-      "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "36",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
     },
-    "name": "updateCurrent",
+    "name": "MemManage_Handler",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@updateCurrent",
+    "ID": "c:@F@BusFault_Handler",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void updateCurrent(double)",
+    "display": "void BusFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "37",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
     },
-    "name": "updateCurrent",
+    "name": "BusFault_Handler",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@gerAdress",
+    "ID": "c:@F@UsageFault_Handler",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint8_t gerAdress(void)",
+    "display": "void UsageFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "38",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "UsageFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SVC_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SVC_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "39",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "SVC_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DebugMon_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DebugMon_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "40",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "DebugMon_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PendSV_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PendSV_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "41",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "PendSV_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SysTick_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SysTick_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "42",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "SysTick_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SPI1_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SPI1_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "43",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "SPI1_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SPI2_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SPI2_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "SPI2_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SPI3_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SPI3_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "45",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "SPI3_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM4_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIM4_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "47",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "TIM4_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@EXTI2_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void EXTI2_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "48",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
+    },
+    "name": "EXTI2_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@tx_buffer",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "tx_buffer",
+    "location": {
+      "column": "27",
+      "line": "14",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "tx_buffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tx_wr_index",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "tx_wr_index",
+    "location": {
+      "column": "32",
+      "line": "15",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "tx_wr_index",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tx_rd_index",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "tx_rd_index",
+    "location": {
+      "column": "44",
+      "line": "15",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "tx_rd_index",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tx_counter",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "tx_counter",
+    "location": {
+      "column": "56",
+      "line": "15",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "tx_counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@dmaVoltageCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "dmaVoltageCounter",
+    "location": {
+      "column": "10",
+      "line": "16",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "dmaVoltageCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@vel_adc",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "vel_adc",
+    "location": {
+      "column": "30",
+      "line": "16",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "vel_adc",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcVoltageSum",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcVoltageSum",
+    "location": {
+      "column": "10",
+      "line": "17",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcVoltageSum",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcVoltageSample",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcVoltageSample",
+    "location": {
+      "column": "26",
+      "line": "17",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcVoltageSample",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcVoltageCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcVoltageCounter",
+    "location": {
+      "column": "47",
+      "line": "17",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcVoltageCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcCurrentSum",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcCurrentSum",
+    "location": {
+      "column": "10",
+      "line": "18",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcCurrentSum",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcCurrentSample",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcCurrentSample",
+    "location": {
+      "column": "26",
+      "line": "18",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcCurrentSample",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@adcCurrentCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adcCurrentCounter",
+    "location": {
+      "column": "47",
+      "line": "18",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "adcCurrentCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@currentBuf",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "currentBuf",
     "location": {
       "column": "9",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "19",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
-    "name": "gerAdress",
-    "origin": "user_include",
+    "name": "currentBuf",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@gerAdress",
-    "What": "Function",
+    "ID": "c:@ADC1ConvertedValue",
+    "What": "Variable",
     "defdec": "Dec",
-    "display": "uint8_t gerAdress(void)",
+    "display": "ADC1ConvertedValue",
+    "location": {
+      "column": "17",
+      "line": "20",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "ADC1ConvertedValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@ADC3ConvertedValue",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "ADC3ConvertedValue",
+    "location": {
+      "column": "36",
+      "line": "20",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "ADC3ConvertedValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@voltageADCValue",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "voltageADCValue",
+    "location": {
+      "column": "8",
+      "line": "21",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "voltageADCValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@currentADCValue",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "currentADCValue",
+    "location": {
+      "column": "24",
+      "line": "21",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "currentADCValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@ms_counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "ms_counter",
+    "location": {
+      "column": "10",
+      "line": "22",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "ms_counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tempCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tempCounter",
+    "location": {
+      "column": "10",
+      "line": "24",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "tempCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@errorCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "errorCounter",
     "location": {
       "column": "9",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "25",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
-    "name": "gerAdress",
-    "origin": "user_include",
+    "name": "errorCounter",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@regulatorAct",
+    "ID": "c:@F@HardFault_Handler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void regulatorAct(void)",
+    "defdec": "Def",
+    "display": "void HardFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "28",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
-    "name": "regulatorAct",
-    "origin": "user_include",
+    "name": "HardFault_Handler",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@regulatorAct",
+    "ID": "c:@F@MemManage_Handler",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void regulatorAct(void)",
+    "defdec": "Def",
+    "display": "void MemManage_Handler(void)",
     "location": {
       "column": "6",
-      "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+      "line": "33",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
-    "name": "regulatorAct",
-    "origin": "user_include",
+    "name": "MemManage_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@BusFault_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void BusFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "38",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "BusFault_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SysTick_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysTick_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "SysTick_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM2_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM2_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "TIM2_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM3_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM3_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "60",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "TIM3_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM4_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM4_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "66",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "TIM4_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM5_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM5_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "71",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "TIM5_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DMA1_Channel1_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void DMA1_Channel1_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "83",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "DMA1_Channel1_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DMA2_Channel4_5_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void DMA2_Channel4_5_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "99",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "DMA2_Channel4_5_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@USART1_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void USART1_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "114",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "USART1_IRQHandler",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -123506,622 +124248,6 @@
       "path": "C:\\Ruslan\\IAR\\STM32F10x_StdPeriph_Lib_V3.5.0\\Libraries\\STM32F10x_StdPeriph_Driver\\inc\\stm32f10x_exti.h"
     },
     "name": "EXTI_ClearITPendingBit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@tx_buffer",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "tx_buffer",
-    "location": {
-      "column": "27",
-      "line": "13",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "tx_buffer",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@tx_wr_index",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "tx_wr_index",
-    "location": {
-      "column": "32",
-      "line": "14",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "tx_wr_index",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@tx_rd_index",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "tx_rd_index",
-    "location": {
-      "column": "44",
-      "line": "14",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "tx_rd_index",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@tx_counter",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "tx_counter",
-    "location": {
-      "column": "56",
-      "line": "14",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "tx_counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@dmaVoltageCounter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "dmaVoltageCounter",
-    "location": {
-      "column": "10",
-      "line": "15",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "dmaVoltageCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@vel_adc",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "vel_adc",
-    "location": {
-      "column": "30",
-      "line": "15",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "vel_adc",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcVoltageSum",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcVoltageSum",
-    "location": {
-      "column": "10",
-      "line": "16",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcVoltageSum",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcVoltageSample",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcVoltageSample",
-    "location": {
-      "column": "26",
-      "line": "16",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcVoltageSample",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcVoltageCounter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcVoltageCounter",
-    "location": {
-      "column": "47",
-      "line": "16",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcVoltageCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcCurrentSum",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcCurrentSum",
-    "location": {
-      "column": "10",
-      "line": "17",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcCurrentSum",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcCurrentSample",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcCurrentSample",
-    "location": {
-      "column": "26",
-      "line": "17",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcCurrentSample",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@adcCurrentCounter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adcCurrentCounter",
-    "location": {
-      "column": "47",
-      "line": "17",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "adcCurrentCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@currentBuf",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "currentBuf",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "currentBuf",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@ADC1ConvertedValue",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "ADC1ConvertedValue",
-    "location": {
-      "column": "17",
-      "line": "19",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "ADC1ConvertedValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@ADC3ConvertedValue",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "ADC3ConvertedValue",
-    "location": {
-      "column": "36",
-      "line": "19",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "ADC3ConvertedValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@voltageADCValue",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "voltageADCValue",
-    "location": {
-      "column": "8",
-      "line": "20",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "voltageADCValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@currentADCValue",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "currentADCValue",
-    "location": {
-      "column": "24",
-      "line": "20",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "currentADCValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@ms_counter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "ms_counter",
-    "location": {
-      "column": "10",
-      "line": "21",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "ms_counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@tempCounter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tempCounter",
-    "location": {
-      "column": "10",
-      "line": "23",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "tempCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@HardFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void HardFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "HardFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@MemManage_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void MemManage_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "30",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "MemManage_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@BusFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void BusFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "35",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "BusFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SysTick_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysTick_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "41",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "SysTick_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM2_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM2_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "50",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "TIM2_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM3_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM3_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "57",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "TIM3_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM4_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM4_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "63",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "TIM4_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DMA1_Channel1_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DMA1_Channel1_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "69",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "DMA1_Channel1_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DMA2_Channel4_5_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DMA2_Channel4_5_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "85",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "DMA2_Channel4_5_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@USART1_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void USART1_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "100",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
-    },
-    "name": "USART1_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32f10x_it.h@1130@macro@__STM32F10x_IT_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32F10x_IT_H",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "__STM32F10x_IT_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@NMI_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void NMI_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "34",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "NMI_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@HardFault_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void HardFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "35",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "HardFault_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@MemManage_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void MemManage_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "36",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "MemManage_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@BusFault_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void BusFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "37",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "BusFault_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UsageFault_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UsageFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "38",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "UsageFault_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SVC_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SVC_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "39",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "SVC_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DebugMon_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DebugMon_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "40",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "DebugMon_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PendSV_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PendSV_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "41",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "PendSV_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SysTick_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SysTick_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "42",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "SysTick_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SPI1_IRQHandler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SPI1_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "43",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "SPI1_IRQHandler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SPI2_IRQHandler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SPI2_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "SPI2_IRQHandler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SPI3_IRQHandler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SPI3_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "45",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "SPI3_IRQHandler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM4_IRQHandler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void TIM4_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "47",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "TIM4_IRQHandler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@EXTI2_IRQHandler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void EXTI2_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.h"
-    },
-    "name": "EXTI2_IRQHandler",
     "origin": "user_include",
     "scope": null
   }

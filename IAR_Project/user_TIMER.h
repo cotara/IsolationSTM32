@@ -9,3 +9,4 @@ void tim3_init(void);
 uint16_t getCcr3Tim();
 void setCcr3Tim(uint16_t val);
 void tim4_init(void);
+void tim5_init(void);
