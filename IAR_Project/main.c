@@ -35,6 +35,7 @@ int main()
   
   GPIO_init();
   
+  //Стартовый "светофор"
   for (int i=0;i< 3;i++){
     PROBOY_LED_ON;
     Delay(100);
@@ -46,45 +47,47 @@ int main()
     Delay(100);
   }
   
-  minCCR = maxCCR*0.5;
-  CCR = maxCCR; 
+  minCCR = maxCCR*0.5;                                                          //Устанавливаем максимальную скважность 50%
+  CCR = maxCCR;                                                                 //Устанавливаем текущую скважность в 0
   
-  tim3_pwm_init(PWM_FREQ);
+  tim3_pwm_init(PWM_FREQ);                                                      //Инит таймера шима с частотой PWM_FREQ
  
   Delay(20);
   
-  adcVoltage_init();
-  adcCurrent_init();
+  adcVoltage_init();                                                            //Инициализация АЦП напряжения
+  adcCurrent_init();                                                            //Инициализация АЦП тока
   
-  tim4_init(); 
+  tim4_init();                                                                  //Инит таймера регулятора
    
-  adress=gerAdress();
-  modbusInit(adress);
-  tim2_init();
-  usart_init();
+  adress=gerAdress();                                                           //Получаем адрес прибора
+  modbusInit(adress);                                                           //Инит модбас адресом
+  tim2_init();                                                                  //Юарт фейл-контроль
+  usart_init();                                                                 //Инит юарт
   tim5_init();                                                                  //Контроль обрыва связи
   
   while(1){
-      ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);
-    
+      ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);                            //Обновляем уставку из регистров
   }
 }
 
-void updateVoltage(double val){
+//ОБНОВЛЯЕМ ДЕЙСТВУЮЩЕЕ НАПРЯЖЕНИЕ
+void updateVoltage(double val){                                                 
     if(CCR == maxCCR)                                                           //Шим выключен
       actualVoltage = 0;
     else
       actualVoltage =(int32_t)(val*1.5584 + 6.5);
+    
     if(errorCounter==0) {                                                        //Штатный режим(нет ошибки связи), без мигания
       if(getReg(HIGH_VOL_REG) || actualVoltage>0)
         HV_LED_ON;
       else
         HV_LED_OFF;
     }
-    setReg(actualVoltage,ACTUAL_VOLTAGE_REG);
+    setReg(actualVoltage,ACTUAL_VOLTAGE_REG);                                   //Записываем в регистры действующее напряжение
     //setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
 }
 
+//ОБНОВЛЯЕМ ТОК
 void updateCurrent(double val){
     if(val<637){                                                                //637 соответствует 4.37 мкА, что соответствует 437 В. То есть до 437В используем одну формулу, а потом другую
       actualCurrent =(int32_t)(0.0768*val-4.5);
@@ -94,18 +97,18 @@ void updateCurrent(double val){
       actualCurrent =(int32_t)(0.0665*val+1.5);
    
     setReg(actualCurrent,ACTUAL_CURR_REG);
-    //setReg(val,ACTUAL_CURR_REG);                                             //Чтобы выводить тугрики для калибровки
+    //setReg(val,ACTUAL_CURR_REG);                                              //Чтобы выводить тугрики для калибровки
     
-    if( actualCurrent>getReg(UST_CURR_REG) ){
+    if( actualCurrent>getReg(UST_CURR_REG) ){                                   //Проверка на дефект
       PROBOY_LED_ON;
-      if(!defectDetected){
+      if(!defectDetected){                                                      //Если это первая точка дефекта
         defectDetected=1;
-        defectPos=position;
-        setReg(getReg(DEFECTS_REG)+1, DEFECTS_REG);
+        defectPos=position;                                                     //Запоминаем позицию дефекта
+        setReg(getReg(DEFECTS_REG)+1, DEFECTS_REG);                             //Инкрементируем дефект
       }
-      else{
-        if(abs(position-defectPos)>= getReg(MAX_DEFECT_LENGTH)){
-          defectPos=position;
+      else{                                                                     //Если это повторный заход в дефект
+        if(abs(position-defectPos)>= getReg(MAX_DEFECT_LENGTH)){                //Проверяем, не закончился ли длинный дефект
+          defectPos=position;                                                   
           setReg(getReg(DEFECTS_REG)+1, DEFECTS_REG);
         }
       }

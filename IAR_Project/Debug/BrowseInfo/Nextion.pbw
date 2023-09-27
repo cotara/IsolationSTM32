@@ -120292,13 +120292,41 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@31@macro@HV_LED_OFF",
+    "ID": "c:user_GPIO.h@31@macro@START_LINE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "START_LINE",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
+    },
+    "name": "START_LINE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:user_GPIO.h@131@macro@STOP_LINE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "STOP_LINE",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
+    },
+    "name": "STOP_LINE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:user_GPIO.h@186@macro@HV_LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_OFF",
     "location": {
       "column": "9",
-      "line": "3",
+      "line": "6",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "HV_LED_OFF",
@@ -120306,13 +120334,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@137@macro@HV_LED_ON",
+    "ID": "c:user_GPIO.h@292@macro@HV_LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_ON",
     "location": {
       "column": "9",
-      "line": "4",
+      "line": "7",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "HV_LED_ON",
@@ -120320,13 +120348,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@189@macro@HV_LED_TOOGLE",
+    "ID": "c:user_GPIO.h@344@macro@HV_LED_TOOGLE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_TOOGLE",
     "location": {
       "column": "9",
-      "line": "5",
+      "line": "8",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "HV_LED_TOOGLE",
@@ -120334,13 +120362,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@239@macro@PROBOY_LED_OFF",
+    "ID": "c:user_GPIO.h@394@macro@PROBOY_LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_OFF",
     "location": {
       "column": "9",
-      "line": "7",
+      "line": "10",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "PROBOY_LED_OFF",
@@ -120348,13 +120376,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@349@macro@PROBOY_LED_ON",
+    "ID": "c:user_GPIO.h@504@macro@PROBOY_LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_ON",
     "location": {
       "column": "9",
-      "line": "8",
+      "line": "11",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "PROBOY_LED_ON",
@@ -120368,7 +120396,7 @@
     "display": "void GPIO_init(void)",
     "location": {
       "column": "6",
-      "line": "10",
+      "line": "13",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "GPIO_init",
@@ -120382,7 +120410,7 @@
     "display": "void GPIO_init(void)",
     "location": {
       "column": "6",
-      "line": "10",
+      "line": "13",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
     "name": "GPIO_init",
@@ -120396,7 +120424,7 @@
     "display": "void GPIO_init(void)",
     "location": {
       "column": "6",
-      "line": "5",
+      "line": "6",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
     },
     "name": "GPIO_init",
@@ -120404,13 +120432,13 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.c@110@F@GPIO_init@GPIO_InitStructure",
+    "ID": "c:user_GPIO.c@112@F@GPIO_init@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "7",
+      "line": "8",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
     },
     "name": "GPIO_InitStructure",
@@ -122664,13 +122692,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1027@F@main@i",
+    "ID": "c:main.c@1070@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "12",
-      "line": "38",
+      "line": "39",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "i",
@@ -122684,7 +122712,7 @@
     "display": "void updateVoltage(double)",
     "location": {
       "column": "6",
-      "line": "73",
+      "line": "74",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateVoltage",
@@ -122698,7 +122726,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "88",
+      "line": "91",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122712,7 +122740,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "121",
+      "line": "124",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122720,13 +122748,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3542@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@5678@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "122",
+      "line": "125",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122734,13 +122762,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3921@F@gerAdress@pin0",
+    "ID": "c:main.c@6057@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "131",
+      "line": "134",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122748,13 +122776,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3921@F@gerAdress@pin1",
+    "ID": "c:main.c@6057@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "131",
+      "line": "134",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122762,13 +122790,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3921@F@gerAdress@pin2",
+    "ID": "c:main.c@6057@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "131",
+      "line": "134",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122776,13 +122804,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3921@F@gerAdress@pin3",
+    "ID": "c:main.c@6057@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "131",
+      "line": "134",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122796,7 +122824,7 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "141",
+      "line": "144",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",
@@ -123448,13 +123476,27 @@
     "scope": null
   },
   {
+    "ID": "c:@selfCalibValue",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "selfCalibValue",
+    "location": {
+      "column": "10",
+      "line": "27",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
+    },
+    "name": "selfCalibValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@HardFault_Handler",
     "What": "Function",
     "defdec": "Def",
     "display": "void HardFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "28",
+      "line": "29",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "HardFault_Handler",
@@ -123468,7 +123510,7 @@
     "display": "void MemManage_Handler(void)",
     "location": {
       "column": "6",
-      "line": "33",
+      "line": "34",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "MemManage_Handler",
@@ -123482,7 +123524,7 @@
     "display": "void BusFault_Handler(void)",
     "location": {
       "column": "6",
-      "line": "38",
+      "line": "39",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "BusFault_Handler",
@@ -123496,7 +123538,7 @@
     "display": "void SysTick_Handler(void)",
     "location": {
       "column": "6",
-      "line": "44",
+      "line": "45",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "SysTick_Handler",
@@ -123510,7 +123552,7 @@
     "display": "void TIM2_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "53",
+      "line": "54",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM2_IRQHandler",
@@ -123524,7 +123566,7 @@
     "display": "void TIM3_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "60",
+      "line": "61",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM3_IRQHandler",
@@ -123538,7 +123580,7 @@
     "display": "void TIM4_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "66",
+      "line": "67",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM4_IRQHandler",
@@ -123552,7 +123594,7 @@
     "display": "void TIM5_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "71",
+      "line": "72",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "TIM5_IRQHandler",
@@ -123566,7 +123608,7 @@
     "display": "void DMA1_Channel1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "83",
+      "line": "84",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "DMA1_Channel1_IRQHandler",
@@ -123580,7 +123622,7 @@
     "display": "void DMA2_Channel4_5_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "99",
+      "line": "100",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "DMA2_Channel4_5_IRQHandler",
@@ -123594,7 +123636,7 @@
     "display": "void USART1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "114",
+      "line": "116",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\stm32f10x_it.c"
     },
     "name": "USART1_IRQHandler",

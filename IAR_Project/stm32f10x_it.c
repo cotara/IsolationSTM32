@@ -24,6 +24,7 @@ uint32_t ms_counter=0;
 uint32_t tempCounter=0;
 uint8_t errorCounter=0;
 
+uint32_t selfCalibValue=0;
 
 void HardFault_Handler(void){
   while (1)
@@ -103,6 +104,7 @@ void DMA2_Channel4_5_IRQHandler(void){
       adcCurrentCounter++;
       if(adcCurrentCounter==adcCurrentSample){
         currentADCValue = adcCurrentSum/(adcCurrentSample/10.0);                //Average Current*10
+                                 
         updateCurrent(currentADCValue);
         adcCurrentCounter=0;
         adcCurrentSum=0;
