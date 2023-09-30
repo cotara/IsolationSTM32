@@ -24,6 +24,7 @@ void modbusInit(uint8_t add){
   regs[6]=200;
   regs[7]=100;  
   regs[8]=10; 
+  regs[9]=0;
 }
 uint8_t setReg(uint16_t val, uint8_t index){
     if(index>REG_SIZE-1) return 1;

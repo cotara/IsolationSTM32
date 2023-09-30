@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#define REG_SIZE 9
+#define REG_SIZE 10
 
 #define TYPE_MODEL_REG 0x00
 #define ACTUAL_VOLTAGE_REG 0x01
@@ -11,7 +11,7 @@
 #define UST_CURR_REG 0x06
 #define UST_LEN_REG 0x07
 #define MAX_DEFECT_LENGTH 0x08
-
+#define STOP_LINE_FLAG 0x09
 
 void modbusInit(uint8_t add);
 uint8_t setReg(uint16_t val, uint8_t index);

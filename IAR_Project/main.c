@@ -34,7 +34,8 @@ int main()
   SysTick_Config(RCC_Clocks.HCLK_Frequency /1000);
   
   GPIO_init();
-  
+
+      
   //Стартовый "светофор"
   for (int i=0;i< 3;i++){
     PROBOY_LED_ON;
@@ -67,6 +68,14 @@ int main()
   
   while(1){
       ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);                            //Обновляем уставку из регистров
+      if(getReg(STOP_LINE_FLAG)){
+        STOP_LINE;
+        Delay(1000);
+        START_LINE;
+        setReg(0,STOP_LINE_FLAG);
+      }
+        
+        
   }
 }
 

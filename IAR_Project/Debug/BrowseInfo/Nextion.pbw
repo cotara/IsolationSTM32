@@ -119220,7 +119220,7 @@
     "display": "uint8_t setReg(uint16_t, uint8_t)",
     "location": {
       "column": "9",
-      "line": "28",
+      "line": "29",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "setReg",
@@ -119234,7 +119234,7 @@
     "display": "uint16_t getReg(uint8_t)",
     "location": {
       "column": "10",
-      "line": "36",
+      "line": "37",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "getReg",
@@ -119248,7 +119248,7 @@
     "display": "uint8_t modbusProcess(void)",
     "location": {
       "column": "9",
-      "line": "41",
+      "line": "42",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "modbusProcess",
@@ -119262,7 +119262,7 @@
     "display": "uint8_t modbus3(void)",
     "location": {
       "column": "9",
-      "line": "63",
+      "line": "64",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "modbus3",
@@ -119270,13 +119270,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@1780@F@modbus3@b_count",
+    "ID": "c:modbus.c@1794@F@modbus3@b_count",
     "What": "Variable",
     "defdec": "Def",
     "display": "b_count",
     "location": {
       "column": "15",
-      "line": "73",
+      "line": "74",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "b_count",
@@ -119290,7 +119290,7 @@
     "display": "uint8_t modbus6(void)",
     "location": {
       "column": "9",
-      "line": "90",
+      "line": "91",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "modbus6",
@@ -119304,7 +119304,7 @@
     "display": "uint8_t modbus16(void)",
     "location": {
       "column": "9",
-      "line": "113",
+      "line": "114",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "modbus16",
@@ -119312,13 +119312,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3075@F@modbus16@tempCount",
+    "ID": "c:modbus.c@3089@F@modbus16@tempCount",
     "What": "Variable",
     "defdec": "Def",
     "display": "tempCount",
     "location": {
       "column": "7",
-      "line": "114",
+      "line": "115",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "tempCount",
@@ -119326,13 +119326,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3453@F@modbus16@countSet",
+    "ID": "c:modbus.c@3467@F@modbus16@countSet",
     "What": "Variable",
     "defdec": "Def",
     "display": "countSet",
     "location": {
       "column": "14",
-      "line": "125",
+      "line": "126",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "countSet",
@@ -119340,13 +119340,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@3594@F@modbus16@i",
+    "ID": "c:modbus.c@3608@F@modbus16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "127",
+      "line": "128",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "i",
@@ -119360,7 +119360,7 @@
     "display": "unsigned short crc16(unsigned char *, unsigned short)",
     "location": {
       "column": "16",
-      "line": "141",
+      "line": "142",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "crc16",
@@ -119368,13 +119368,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4057@F@crc16@crc",
+    "ID": "c:modbus.c@4071@F@crc16@crc",
     "What": "Variable",
     "defdec": "Def",
     "display": "crc",
     "location": {
       "column": "18",
-      "line": "143",
+      "line": "144",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "crc",
@@ -119382,13 +119382,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4094@F@crc16@i",
+    "ID": "c:modbus.c@4108@F@crc16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "11",
-      "line": "144",
+      "line": "145",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "i",
@@ -119396,13 +119396,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@4149@F@crc16@j",
+    "ID": "c:modbus.c@4163@F@crc16@j",
     "What": "Variable",
     "defdec": "Def",
     "display": "j",
     "location": {
       "column": "13",
-      "line": "147",
+      "line": "148",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "j",
@@ -119564,7 +119564,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@53@macro@TYPE_MODEL_REG",
+    "ID": "c:modbus.h@54@macro@TYPE_MODEL_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TYPE_MODEL_REG",
@@ -119578,7 +119578,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@82@macro@ACTUAL_VOLTAGE_REG",
+    "ID": "c:modbus.h@83@macro@ACTUAL_VOLTAGE_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ACTUAL_VOLTAGE_REG",
@@ -119592,7 +119592,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@115@macro@ACTUAL_CURR_REG",
+    "ID": "c:modbus.h@116@macro@ACTUAL_CURR_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "ACTUAL_CURR_REG",
@@ -119606,7 +119606,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@145@macro@DEFECTS_REG",
+    "ID": "c:modbus.h@146@macro@DEFECTS_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFECTS_REG",
@@ -119620,7 +119620,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@171@macro@HIGH_VOL_REG",
+    "ID": "c:modbus.h@172@macro@HIGH_VOL_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HIGH_VOL_REG",
@@ -119634,7 +119634,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@198@macro@UST_VOLTAGE_REG",
+    "ID": "c:modbus.h@199@macro@UST_VOLTAGE_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UST_VOLTAGE_REG",
@@ -119648,7 +119648,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@228@macro@UST_CURR_REG",
+    "ID": "c:modbus.h@229@macro@UST_CURR_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UST_CURR_REG",
@@ -119662,7 +119662,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@255@macro@UST_LEN_REG",
+    "ID": "c:modbus.h@256@macro@UST_LEN_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UST_LEN_REG",
@@ -119676,7 +119676,7 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.h@281@macro@MAX_DEFECT_LENGTH",
+    "ID": "c:modbus.h@282@macro@MAX_DEFECT_LENGTH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "MAX_DEFECT_LENGTH",
@@ -119686,6 +119686,20 @@
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "MAX_DEFECT_LENGTH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@314@macro@STOP_LINE_FLAG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "STOP_LINE_FLAG",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "STOP_LINE_FLAG",
     "origin": "user_include",
     "scope": null
   },
@@ -120306,12 +120320,12 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@131@macro@STOP_LINE",
+    "ID": "c:user_GPIO.h@132@macro@STOP_LINE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "STOP_LINE",
     "location": {
-      "column": "9",
+      "column": "10",
       "line": "4",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
@@ -120320,7 +120334,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@186@macro@HV_LED_OFF",
+    "ID": "c:user_GPIO.h@187@macro@HV_LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_OFF",
@@ -120334,7 +120348,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@292@macro@HV_LED_ON",
+    "ID": "c:user_GPIO.h@293@macro@HV_LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_ON",
@@ -120348,7 +120362,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@344@macro@HV_LED_TOOGLE",
+    "ID": "c:user_GPIO.h@345@macro@HV_LED_TOOGLE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "HV_LED_TOOGLE",
@@ -120362,7 +120376,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@394@macro@PROBOY_LED_OFF",
+    "ID": "c:user_GPIO.h@395@macro@PROBOY_LED_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_OFF",
@@ -120376,7 +120390,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@504@macro@PROBOY_LED_ON",
+    "ID": "c:user_GPIO.h@505@macro@PROBOY_LED_ON",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PROBOY_LED_ON",
@@ -122356,90 +122370,6 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:@actualVoltage",
     "What": "Variable",
     "defdec": "Def",
@@ -122692,13 +122622,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1070@F@main@i",
+    "ID": "c:main.c@1076@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "12",
-      "line": "39",
+      "line": "40",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "i",
@@ -122712,7 +122642,7 @@
     "display": "void updateVoltage(double)",
     "location": {
       "column": "6",
-      "line": "74",
+      "line": "83",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateVoltage",
@@ -122726,7 +122656,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "91",
+      "line": "100",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122740,7 +122670,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "124",
+      "line": "133",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122748,13 +122678,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5678@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@5846@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "125",
+      "line": "134",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122762,13 +122692,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6057@F@gerAdress@pin0",
+    "ID": "c:main.c@6225@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "134",
+      "line": "143",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122776,13 +122706,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6057@F@gerAdress@pin1",
+    "ID": "c:main.c@6225@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "134",
+      "line": "143",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122790,13 +122720,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6057@F@gerAdress@pin2",
+    "ID": "c:main.c@6225@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "134",
+      "line": "143",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122804,13 +122734,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6057@F@gerAdress@pin3",
+    "ID": "c:main.c@6225@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "134",
+      "line": "143",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122824,7 +122754,7 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "144",
+      "line": "153",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",
@@ -122982,6 +122912,90 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
     },
     "name": "lldiv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
     "origin": "system_include",
     "scope": null
   },
