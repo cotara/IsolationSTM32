@@ -120306,30 +120306,30 @@
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@31@macro@START_LINE",
+    "ID": "c:user_GPIO.h@31@macro@STOP_LINE",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "START_LINE",
+    "display": "STOP_LINE",
     "location": {
       "column": "9",
       "line": "3",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
-    "name": "START_LINE",
+    "name": "STOP_LINE",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:user_GPIO.h@132@macro@STOP_LINE",
+    "ID": "c:user_GPIO.h@130@macro@START_LINE",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "STOP_LINE",
+    "display": "START_LINE",
     "location": {
-      "column": "10",
+      "column": "9",
       "line": "4",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.h"
     },
-    "name": "STOP_LINE",
+    "name": "START_LINE",
     "origin": "user_include",
     "scope": null
   },
