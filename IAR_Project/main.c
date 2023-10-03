@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int32_t actualVoltage=0;
-int32_t actualCurrent=0;
+int32_t actualCurrent=0, maxDefectCurrent=0;
 int16_t ustVoltage=0;
 double regKoefCur = 0.6;
 double regKoef = 0.06;
@@ -22,8 +22,9 @@ double err;                                                                     
 uint8_t defectDetected = 0;                                                     
 int32_t defectPos=0;
 extern int32_t position;
+extern int32_t speed;
 extern uint8_t errorCounter;
-
+extern uint8_t readFlag;  
 uint32_t counter__ = 0;
 uint8_t adress=0;
 
@@ -68,14 +69,12 @@ int main()
   
   while(1){
       ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);                            //Обновляем уставку из регистров
-      if(getReg(STOP_LINE_FLAG)){
+      if(getReg(STOP_LINE_FLAG)){                                               //Если в регистре появилась команда на стоп, дёргаем релюшку на секунду
         STOP_LINE;
         Delay(1000);
         START_LINE;
         setReg(0,STOP_LINE_FLAG);
-      }
-        
-        
+      }       
   }
 }
 
@@ -104,21 +103,26 @@ void updateCurrent(double val){
     }
     else
       actualCurrent =(int32_t)(0.0665*val+1.5);
-   
-    setReg(actualCurrent,ACTUAL_CURR_REG);
+    
+    //Ток записываем с поправкой на скорость  из расчета, что при 100 м/мин паразитный ток 10 мкА.
+    //Т.к. ток в регистрах модбас хранится умноженный на 10, то можно просто вычесть текущее значение скорости
+    //actualCurrent-=speed;    
+    
     //setReg(val,ACTUAL_CURR_REG);                                              //Чтобы выводить тугрики для калибровки
     
-    if( actualCurrent>getReg(UST_CURR_REG) ){                                   //Проверка на дефект
+    if(actualCurrent>getReg(UST_CURR_REG) ){                                   //Проверка на дефект
       PROBOY_LED_ON;
       if(!defectDetected){                                                      //Если это первая точка дефекта
         defectDetected=1;
+        readFlag=0;                                                             //Новый дефект и он еще не отправлен
+        maxDefectCurrent = 0;                                                   //Сбрасываем максимальный ток текущего дефетка
         defectPos=position;                                                     //Запоминаем позицию дефекта
         setReg(getReg(DEFECTS_REG)+1, DEFECTS_REG);                             //Инкрементируем дефект
       }
-      else{                                                                     //Если это повторный заход в дефект
-        if(abs(position-defectPos)>= getReg(MAX_DEFECT_LENGTH)){                //Проверяем, не закончился ли длинный дефект
-          defectPos=position;                                                   
-          setReg(getReg(DEFECTS_REG)+1, DEFECTS_REG);
+      else{                                                                     //Если это не первая точка длинного дефетка
+        if(abs(position-defectPos)>= getReg(MAX_DEFECT_LENGTH)){                //Если дефект уже длиннее, чем максимальная длина дефекта
+          defectDetected=0;                                                     //сбрасываем факт дефекта, начиная новый дефект
+          PROBOY_LED_OFF;
         }
       }
     }
@@ -126,6 +130,19 @@ void updateCurrent(double val){
       defectDetected=0;
       PROBOY_LED_OFF;
     }
+    
+    //Что запихаем в регистр на отправку?
+    //Надо сохранить максимальный ток, который был в момент дефекта/дефектов, если их было более одного
+    if(readFlag == 0){                                                          //Если случившийся дефект еще не отправлен,
+       if(actualCurrent > maxDefectCurrent){                                    // сохраняем только наибольший ток
+          maxDefectCurrent = actualCurrent;
+          setReg(maxDefectCurrent,ACTUAL_CURR_REG);                                                               
+       }
+    }
+    else{
+      setReg(actualCurrent,ACTUAL_CURR_REG);                                    //Иначе, храним актуальный ток
+    }  
+
 }
 
 

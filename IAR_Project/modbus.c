@@ -7,12 +7,12 @@ extern uint8_t TXi;
 extern uint8_t rxBuf[RX_BUF_SIZE];
 extern uint8_t txBuf[TX_BUF_SIZE];
 extern uint8_t currentBuf[3500];
-
+uint8_t readFlag = 1;                                                           //PROCHITANO!
 unsigned short CRC16 = 0;
 uint16_t regs[REG_SIZE] = {'\0'};
 uint8_t modAdd;
 int32_t position;
-
+int32_t speed=0;
 void modbusInit(uint8_t add){
   modAdd = add;
   regs[0] = (4 << 8) + 1;                                                         //Type + model
@@ -45,6 +45,7 @@ uint8_t modbusProcess(){
   if(rxBuf[0] != modAdd) {
     if( rxBuf[0] == 2){                       //sniffing ID answer
       position = 65536*((rxBuf[11]<<8) + rxBuf[12]) + ((rxBuf[13]<<8) + rxBuf[14] );
+      speed = 65536*((rxBuf[23]<<8) + rxBuf[24]) + ((rxBuf[25]<<8) + rxBuf[26] ) / 10;  //speed in m/min in int!
     }  
     RXi = 0;      
     return 1;
@@ -81,6 +82,7 @@ uint8_t modbus3(){
       txBuf[rxBuf[5]*2+4] = CRC16>>8;                                           //CRC L
 
       USART1_put_string(txBuf,rxBuf[5]*2+5);
+      readFlag=1;
       return 0;
     }
     else return 1;
