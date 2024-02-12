@@ -11,20 +11,27 @@ uint8_t readFlag = 1;                                                           
 unsigned short CRC16 = 0;
 uint16_t regs[REG_SIZE] = {'\0'};
 uint8_t modAdd;
-int32_t position;
+int32_t position=0;
 int32_t speed=0;
 void modbusInit(uint8_t add){
   modAdd = add;
   regs[0] = (4 << 8) + 1;                                                         //Type + model
-  regs[1]=0;
-  regs[2]=0;
-  regs[3]=0;
-  regs[4]=0;
-  regs[5]=0;
-  regs[6]=200;
-  regs[7]=100;  
-  regs[8]=10; 
-  regs[9]=0;
+  regs[1]=0;                                                                    // действующее значение напряжения
+  regs[2]=0;                                                                    //действующая сила тока
+  regs[3]=0;                                                                    //количество дефектов
+  regs[4]=0;                                                                    //высокое вкл/выкл
+  regs[5]=0;                                                                    //Уставка по напряжению
+  regs[6]=200;                                                                  //уставка по току
+  regs[7]=100;                                                                  //уставка по длине
+  regs[8]=10;                                                                   //максимальная длина дефекта
+  regs[9]=0;                                                                    //стоп линия
+  //Калибровка
+  regs[10]=0;                                                                   //Эталонное напряжение 1 
+  regs[11]=0;                                                                   //Эталонное напряжение 2
+  regs[12]=0;                                                                   //Эталонный ток 1
+  regs[13]=0;                                                                   //Эталонный ток 2
+  regs[14]=0;                                                                   //Записать значение в EEPROM
+  
 }
 uint8_t setReg(uint16_t val, uint8_t index){
     if(index>REG_SIZE-1) return 1;
@@ -109,6 +116,15 @@ uint8_t modbus6(){
       if(rxBuf[3]<REG_SIZE)                                                     //������ �������� �� ������
         regs[rxBuf[3]] = (rxBuf[4]<<8)|rxBuf[5];    
     }
+    if(rxBuf[3] == 0xA)                                                        //Установили etVol1
+       saveADC_ActualVoltageEt1();
+     else if(rxBuf[3] == 0xB)                                                        //Установили etVol1
+       saveADC_ActualVoltageEt2();
+     else if(rxBuf[3] == 0xC)                                                        //Установили etVol1
+       saveADC_ActualCurrentEt1();
+     else if(rxBuf[3] == 0xD)                                                        //Установили etVol1
+       saveADC_ActualCurrentEt2();
+     
     USART1_put_string(txBuf,8);
       return 0;
 }           
@@ -132,6 +148,8 @@ uint8_t modbus16(){
           countSet++;
        }
      }
+     
+     
      txBuf[5] = countSet;
      CRC16 = crc16(txBuf,6);
      txBuf[6] = CRC16&0xFF;                                                       //CRC L

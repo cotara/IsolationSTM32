@@ -6,14 +6,27 @@
 void GPIO_init(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
-
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);  
+//  SIBKABEL
+//  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);  
+//  
+//  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_13;		                        //Меандр 1 кГц
+//  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;	
+//  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;	
+//  GPIO_Init(GPIOB, &GPIO_InitStructure);     
   
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_13;		                        //Меандр 1 кГц
+  
+  //  LITE
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); 
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);  
+  
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 ;		        //Индикация
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;	
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;	
-  GPIO_Init(GPIOB, &GPIO_InitStructure);     
+  GPIO_Init(GPIOD, &GPIO_InitStructure);   
   
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 ;		                        //Реле
+
+  GPIO_Init(GPIOB, &GPIO_InitStructure);   
   //START_LINE;
     
 }

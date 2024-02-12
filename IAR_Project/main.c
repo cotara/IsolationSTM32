@@ -27,7 +27,10 @@ extern uint8_t errorCounter;
 extern uint8_t readFlag;  
 uint32_t counter__ = 0;
 uint8_t adress=0;
+float k_vol=1.5, b_vol=0, k_cur=0.06, b_cur=0;
+double ADC_ActualVoltage=0,ADC_VoltageEt1=0, ADC_VoltageEt2=0,ADC_ActualCurrent=0,ADC_CurrentEt1=0,ADC_CurrentEt2=0;
 
+//Различия в пинах индикации (user_GPIO.c и user_GPIO.h) 
 int main()
 {    
   RCC_ClocksTypeDef RCC_Clocks;
@@ -74,16 +77,25 @@ int main()
         Delay(1000);
         START_LINE;
         setReg(0,STOP_LINE_FLAG);
-      }       
+      }
+      if(getReg(EEPROM_SET)){
+        saveToEEPROM();
+
+          
+        setReg(0,EEPROM_SET);
+      }
+        
   }
 }
 
 //ОБНОВЛЯЕМ ДЕЙСТВУЮЩЕЕ НАПРЯЖЕНИЕ
-void updateVoltage(double val){                                                 
+void updateVoltage(double val){
+    ADC_ActualVoltage = val;
     if(CCR == maxCCR)                                                           //Шим выключен
       actualVoltage = 0;
     else
-      actualVoltage =(int32_t)(val*1.5584 + 6.5);
+      //actualVoltage =(int32_t)(val*1.5584 + 6.5);
+      actualVoltage =(int32_t)(val*k_vol + b_vol);
     
     if(errorCounter==0) {                                                        //Штатный режим(нет ошибки связи), без мигания
       if(getReg(HIGH_VOL_REG) || actualVoltage>0)
@@ -97,12 +109,16 @@ void updateVoltage(double val){
 
 //ОБНОВЛЯЕМ ТОК
 void updateCurrent(double val){
-    if(val<637){                                                                //637 соответствует 4.37 мкА, что соответствует 437 В. То есть до 437В используем одну формулу, а потом другую
-      actualCurrent =(int32_t)(0.0768*val-4.5);
-      if(actualCurrent<0)       actualCurrent=0;
-    }
-    else
-      actualCurrent =(int32_t)(0.0665*val+1.5);
+    ADC_ActualCurrent = val;
+    
+//    if(val<637){                                                                //637 соответствует 4.37 мкА, что соответствует 437 В. То есть до 437В используем одну формулу, а потом другую
+//      actualCurrent =(int32_t)(0.0768*val-4.5);
+//      if(actualCurrent<0)       actualCurrent=0;
+//    }
+//    else
+//      actualCurrent =(int32_t)(0.0665*val+1.5);
+    
+    actualCurrent = (int32_t)(k_cur*val+b_cur);
     
     //Ток записываем с поправкой на скорость  из расчета, что при 100 м/мин паразитный ток 10 мкА.
     //Т.к. ток в регистрах модбас хранится умноженный на 10, то можно просто вычесть текущее значение скорости
@@ -183,4 +199,33 @@ void regulatorAct(){
     CCR = maxCCR;
 
   setCcr3Tim((uint16_t)CCR);
+}
+
+void saveADC_ActualVoltageEt1(){
+  ADC_VoltageEt1 = ADC_ActualVoltage;
+}
+void saveADC_ActualVoltageEt2(){
+  ADC_VoltageEt2 = ADC_ActualVoltage;
+}
+void saveADC_ActualCurrentEt1(){
+  ADC_CurrentEt1 = ADC_ActualCurrent;
+}
+void saveADC_ActualCurrentEt2(){
+  ADC_CurrentEt2 = ADC_ActualCurrent;
+}
+//Функции записи коэффициентов в EEPROM
+void saveToEEPROM(){
+  
+  k_vol = (ADC_VoltageEt2 - ADC_VoltageEt1)/(getReg(ET_VOL2) - getReg(ET_VOL1));
+  b_vol = ADC_VoltageEt1 - k_vol*getReg(ET_VOL1);
+  k_cur = (ADC_CurrentEt2 - ADC_CurrentEt1)/(getReg(ET_CUR2) - getReg(ET_CUR1));
+  b_cur = ADC_CurrentEt1 - k_cur*getReg(ET_CUR1);
+
+    PROBOY_LED_ON;
+    HV_LED_ON;
+    Delay(1000);
+    PROBOY_LED_OFF;
+    HV_LED_OFF;
+
+
 }
