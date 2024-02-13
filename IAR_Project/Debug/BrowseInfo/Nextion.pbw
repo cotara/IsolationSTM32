@@ -120082,13 +120082,125 @@
     "scope": null
   },
   {
+    "ID": "c:modbus.h@507@macro@K_VOL_HIGH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "K_VOL_HIGH",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "K_VOL_HIGH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@536@macro@K_VOL_LOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "K_VOL_LOW",
+    "location": {
+      "column": "9",
+      "line": "22",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "K_VOL_LOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@565@macro@B_VOL_HIGH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "B_VOL_HIGH",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "B_VOL_HIGH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@594@macro@B_VOL_LOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "B_VOL_LOW",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "B_VOL_LOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@623@macro@K_CUR_HIGH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "K_CUR_HIGH",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "K_CUR_HIGH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@652@macro@K_CUR_LOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "K_CUR_LOW",
+    "location": {
+      "column": "9",
+      "line": "26",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "K_CUR_LOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@681@macro@B_CUR_HIGH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "B_CUR_HIGH",
+    "location": {
+      "column": "9",
+      "line": "27",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "B_CUR_HIGH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:modbus.h@710@macro@B_CUR_LOW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "B_CUR_LOW",
+    "location": {
+      "column": "9",
+      "line": "28",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
+    },
+    "name": "B_CUR_LOW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@modbusInit",
     "What": "Function",
     "defdec": "Dec",
     "display": "void modbusInit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "30",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbusInit",
@@ -120102,7 +120214,7 @@
     "display": "void modbusInit(uint8_t)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "30",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbusInit",
@@ -120116,7 +120228,7 @@
     "display": "uint8_t setReg(uint16_t, uint8_t)",
     "location": {
       "column": "9",
-      "line": "23",
+      "line": "31",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "setReg",
@@ -120130,7 +120242,7 @@
     "display": "uint8_t setReg(uint16_t, uint8_t)",
     "location": {
       "column": "9",
-      "line": "23",
+      "line": "31",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "setReg",
@@ -120144,7 +120256,7 @@
     "display": "uint16_t getReg(uint8_t)",
     "location": {
       "column": "10",
-      "line": "24",
+      "line": "32",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "getReg",
@@ -120158,7 +120270,7 @@
     "display": "uint16_t getReg(uint8_t)",
     "location": {
       "column": "10",
-      "line": "24",
+      "line": "32",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "getReg",
@@ -120172,7 +120284,7 @@
     "display": "uint8_t toBuf(uint8_t)",
     "location": {
       "column": "9",
-      "line": "25",
+      "line": "33",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "toBuf",
@@ -120186,7 +120298,7 @@
     "display": "uint8_t modbusProcess(void)",
     "location": {
       "column": "9",
-      "line": "26",
+      "line": "34",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbusProcess",
@@ -120200,7 +120312,7 @@
     "display": "uint8_t modbusProcess(void)",
     "location": {
       "column": "9",
-      "line": "26",
+      "line": "34",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbusProcess",
@@ -120214,7 +120326,7 @@
     "display": "uint8_t modbus3(void)",
     "location": {
       "column": "9",
-      "line": "27",
+      "line": "35",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus3",
@@ -120228,7 +120340,7 @@
     "display": "uint8_t modbus3(void)",
     "location": {
       "column": "9",
-      "line": "27",
+      "line": "35",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus3",
@@ -120242,7 +120354,7 @@
     "display": "uint8_t modbus6(void)",
     "location": {
       "column": "9",
-      "line": "28",
+      "line": "36",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus6",
@@ -120256,7 +120368,7 @@
     "display": "uint8_t modbus6(void)",
     "location": {
       "column": "9",
-      "line": "28",
+      "line": "36",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus6",
@@ -120270,7 +120382,7 @@
     "display": "uint8_t modbus16(void)",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "37",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus16",
@@ -120284,7 +120396,7 @@
     "display": "uint8_t modbus16(void)",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "37",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "modbus16",
@@ -120298,7 +120410,7 @@
     "display": "unsigned short crc16(unsigned char *, unsigned short)",
     "location": {
       "column": "16",
-      "line": "30",
+      "line": "38",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "crc16",
@@ -120312,7 +120424,7 @@
     "display": "unsigned short crc16(unsigned char *, unsigned short)",
     "location": {
       "column": "16",
-      "line": "30",
+      "line": "38",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "crc16",
@@ -122000,13 +122112,85 @@
     "scope": null
   },
   {
+    "ID": "c:@UA@flTosh_t",
+    "What": "Union",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+    },
+    "members": [
+      {
+        "ID": "c:@UA@flTosh_t@FI@sh",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "sh",
+        "location": {
+          "column": "12",
+          "line": "34",
+          "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+        },
+        "name": "sh",
+        "origin": "project_file",
+        "scope": "_anonymous_main_c_33_9"
+      },
+      {
+        "ID": "c:@UA@flTosh_t@FI@fl",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "fl",
+        "location": {
+          "column": "9",
+          "line": "35",
+          "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+        },
+        "name": "fl",
+        "origin": "project_file",
+        "scope": "_anonymous_main_c_33_9"
+      },
+      {
+        "ID": "c:@T@flTosh_t",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "union flTosh_t",
+        "location": {
+          "column": "2",
+          "line": "36",
+          "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+        },
+        "name": "flTosh_t",
+        "origin": "project_file",
+        "scope": "_anonymous_main_c_33_9"
+      }
+    ],
+    "name": "",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@m_flTosh",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "m_flTosh",
+    "location": {
+      "column": "10",
+      "line": "38",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+    },
+    "name": "m_flTosh",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "34",
+      "line": "41",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "main",
@@ -122014,13 +122198,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1196@F@main@RCC_Clocks",
+    "ID": "c:main.c@1281@F@main@RCC_Clocks",
     "What": "Variable",
     "defdec": "Def",
     "display": "RCC_Clocks",
     "location": {
       "column": "21",
-      "line": "36",
+      "line": "43",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "RCC_Clocks",
@@ -122028,13 +122212,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1394@F@main@i",
+    "ID": "c:main.c@1885@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "12",
-      "line": "44",
+      "line": "63",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "i",
@@ -122048,7 +122232,7 @@
     "display": "void updateVoltage(double)",
     "location": {
       "column": "6",
-      "line": "92",
+      "line": "111",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateVoltage",
@@ -122062,7 +122246,7 @@
     "display": "void updateCurrent(double)",
     "location": {
       "column": "6",
-      "line": "111",
+      "line": "130",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "updateCurrent",
@@ -122076,7 +122260,7 @@
     "display": "uint8_t gerAdress(void)",
     "location": {
       "column": "9",
-      "line": "166",
+      "line": "185",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "gerAdress",
@@ -122084,13 +122268,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8252@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@8744@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "20",
-      "line": "167",
+      "line": "186",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -122098,13 +122282,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8631@F@gerAdress@pin0",
+    "ID": "c:main.c@9123@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
     "location": {
       "column": "11",
-      "line": "176",
+      "line": "195",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin0",
@@ -122112,13 +122296,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8631@F@gerAdress@pin1",
+    "ID": "c:main.c@9123@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
     "location": {
       "column": "17",
-      "line": "176",
+      "line": "195",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin1",
@@ -122126,13 +122310,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8631@F@gerAdress@pin2",
+    "ID": "c:main.c@9123@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
     "location": {
       "column": "23",
-      "line": "176",
+      "line": "195",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin2",
@@ -122140,13 +122324,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8631@F@gerAdress@pin3",
+    "ID": "c:main.c@9123@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
     "location": {
       "column": "29",
-      "line": "176",
+      "line": "195",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "pin3",
@@ -122160,7 +122344,7 @@
     "display": "void regulatorAct(void)",
     "location": {
       "column": "6",
-      "line": "186",
+      "line": "205",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "regulatorAct",
@@ -122174,7 +122358,7 @@
     "display": "void saveADC_ActualVoltageEt1(void)",
     "location": {
       "column": "6",
-      "line": "204",
+      "line": "224",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "saveADC_ActualVoltageEt1",
@@ -122188,7 +122372,7 @@
     "display": "void saveADC_ActualVoltageEt2(void)",
     "location": {
       "column": "6",
-      "line": "207",
+      "line": "227",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "saveADC_ActualVoltageEt2",
@@ -122202,7 +122386,7 @@
     "display": "void saveADC_ActualCurrentEt1(void)",
     "location": {
       "column": "6",
-      "line": "210",
+      "line": "230",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "saveADC_ActualCurrentEt1",
@@ -122216,7 +122400,7 @@
     "display": "void saveADC_ActualCurrentEt2(void)",
     "location": {
       "column": "6",
-      "line": "213",
+      "line": "233",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "saveADC_ActualCurrentEt2",
@@ -122230,7 +122414,7 @@
     "display": "void saveToEEPROM(void)",
     "location": {
       "column": "6",
-      "line": "217",
+      "line": "237",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "saveToEEPROM",
@@ -123902,160 +124086,6 @@
     "scope": null
   },
   {
-    "ID": "c:DLib_Product_stdlib.h@251@macro@_DLIB_PRODUCTS_STDLIB_H_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRODUCTS_STDLIB_H_",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "_DLIB_PRODUCTS_STDLIB_H_",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@div",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "div_t div(int, int)",
-    "location": {
-      "column": "7",
-      "line": "29",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "div",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@647@F@div@q",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "q",
-    "location": {
-      "column": "7",
-      "line": "32",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "q",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@665@F@div@r",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "r",
-    "location": {
-      "column": "7",
-      "line": "33",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "r",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@687@F@div@d",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "d",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "d",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@ldiv",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "ldiv_t ldiv(long, long)",
-    "location": {
-      "column": "8",
-      "line": "45",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "ldiv",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@1014@F@ldiv@q",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "q",
-    "location": {
-      "column": "7",
-      "line": "54",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "q",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@1032@F@ldiv@r",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "r",
-    "location": {
-      "column": "7",
-      "line": "55",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "r",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product_stdlib.h@1054@F@ldiv@ld",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "ld",
-    "location": {
-      "column": "10",
-      "line": "56",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "ld",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__aeabi_ldivmod",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "lldiv_t __aeabi_ldivmod(long long, long long)",
-    "location": {
-      "column": "13",
-      "line": "83",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "__aeabi_ldivmod",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@lldiv",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "lldiv_t lldiv(long long, long long)",
-    "location": {
-      "column": "13",
-      "line": "87",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
-    },
-    "name": "lldiv",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:@tx_buffer",
     "What": "Variable",
     "defdec": "Dec",
@@ -124501,6 +124531,160 @@
     },
     "name": "USART1_IRQHandler",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@251@macro@_DLIB_PRODUCTS_STDLIB_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRODUCTS_STDLIB_H_",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "_DLIB_PRODUCTS_STDLIB_H_",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@div",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "div_t div(int, int)",
+    "location": {
+      "column": "7",
+      "line": "29",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "div",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@647@F@div@q",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "q",
+    "location": {
+      "column": "7",
+      "line": "32",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "q",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@665@F@div@r",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "r",
+    "location": {
+      "column": "7",
+      "line": "33",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@687@F@div@d",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "d",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "d",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ldiv",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "ldiv_t ldiv(long, long)",
+    "location": {
+      "column": "8",
+      "line": "45",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "ldiv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1014@F@ldiv@q",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "q",
+    "location": {
+      "column": "7",
+      "line": "54",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "q",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1032@F@ldiv@r",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "r",
+    "location": {
+      "column": "7",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1054@F@ldiv@ld",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "ld",
+    "location": {
+      "column": "10",
+      "line": "56",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "ld",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__aeabi_ldivmod",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "lldiv_t __aeabi_ldivmod(long long, long long)",
+    "location": {
+      "column": "13",
+      "line": "83",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "__aeabi_ldivmod",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@lldiv",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "lldiv_t lldiv(long long, long long)",
+    "location": {
+      "column": "13",
+      "line": "87",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "lldiv",
+    "origin": "system_include",
     "scope": null
   },
   {

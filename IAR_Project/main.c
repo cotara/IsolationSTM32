@@ -30,6 +30,13 @@ uint8_t adress=0;
 float k_vol=1.5, b_vol=0, k_cur=0.06, b_cur=0;
 double ADC_ActualVoltage=0,ADC_VoltageEt1=0, ADC_VoltageEt2=0,ADC_ActualCurrent=0,ADC_CurrentEt1=0,ADC_CurrentEt2=0;
 
+typedef union {
+  uint16_t sh[2];
+  float fl;
+}flTosh_t;
+
+flTosh_t m_flTosh;
+
 //Различия в пинах индикации (user_GPIO.c и user_GPIO.h) 
 int main()
 {    
@@ -38,7 +45,19 @@ int main()
   SysTick_Config(RCC_Clocks.HCLK_Frequency /1000);
   
   GPIO_init();
-
+  
+  m_flTosh.fl = k_vol;
+  setReg(m_flTosh.sh[0],K_VOL_HIGH); 
+  setReg(m_flTosh.sh[1],K_VOL_LOW); 
+  m_flTosh.fl = b_vol;
+  setReg(m_flTosh.sh[0],B_VOL_HIGH); 
+  setReg(m_flTosh.sh[1],B_VOL_LOW); 
+  m_flTosh.fl = k_cur;
+  setReg(m_flTosh.sh[0],K_CUR_HIGH); 
+  setReg(m_flTosh.sh[1],K_CUR_LOW); 
+  m_flTosh.fl = b_cur;
+  setReg(m_flTosh.sh[0],B_CUR_HIGH); 
+  setReg(m_flTosh.sh[1],B_CUR_LOW); 
       
   //Стартовый "светофор"
   for (int i=0;i< 3;i++){
@@ -52,7 +71,7 @@ int main()
     Delay(100);
   }
   
-  minCCR = maxCCR*0.5;                                                          //Устанавливаем максимальную скважность 50%
+  minCCR = maxCCR*0.65;                                                          //Устанавливаем максимальную скважность 50%
   CCR = maxCCR;                                                                 //Устанавливаем текущую скважность в 0
   
   tim3_pwm_init(PWM_FREQ);                                                      //Инит таймера шима с частотой PWM_FREQ
@@ -184,21 +203,22 @@ uint8_t gerAdress(){
 }
 
 void regulatorAct(){
-  if(ustVoltage==0)
-    CCR=maxCCR;
-  if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
-    err = regKoefCur*(maxCurrent-actualCurrent);
-  else
-    err = regKoef*(ustVoltage-actualVoltage);
-  
-  CCR = CCR - err;
-       
-  if(CCR<minCCR) 
-    CCR = minCCR;
-  else if(CCR > maxCCR) 
-    CCR = maxCCR;
 
-  setCcr3Tim((uint16_t)CCR);
+    if(getReg(HIGH_VOL_REG) == 0 || ustVoltage==0)                              //Регулируем только если включено высокое и уставка не ноль
+      CCR=maxCCR;
+    if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
+      err = regKoefCur*(maxCurrent-actualCurrent);
+    else
+      err = regKoef*(ustVoltage-actualVoltage);
+    
+    CCR = CCR - err;
+         
+    if(CCR<minCCR) 
+      CCR = minCCR;
+    else if(CCR > maxCCR) 
+      CCR = maxCCR;
+
+    setCcr3Tim((uint16_t)CCR);
 }
 
 void saveADC_ActualVoltageEt1(){
@@ -215,12 +235,25 @@ void saveADC_ActualCurrentEt2(){
 }
 //Функции записи коэффициентов в EEPROM
 void saveToEEPROM(){
-  
-  k_vol = (ADC_VoltageEt2 - ADC_VoltageEt1)/(getReg(ET_VOL2) - getReg(ET_VOL1));
-  b_vol = ADC_VoltageEt1 - k_vol*getReg(ET_VOL1);
-  k_cur = (ADC_CurrentEt2 - ADC_CurrentEt1)/(getReg(ET_CUR2) - getReg(ET_CUR1));
-  b_cur = ADC_CurrentEt1 - k_cur*getReg(ET_CUR1);
 
+  k_vol = ((double)getReg(ET_VOL2) - (double)getReg(ET_VOL1))/(ADC_VoltageEt2 - ADC_VoltageEt1);
+  b_vol = getReg(ET_VOL1)-k_vol*ADC_VoltageEt1;
+  k_cur = (float)(getReg(ET_CUR2) - getReg(ET_CUR1)/(ADC_CurrentEt2 - ADC_CurrentEt1));
+  b_cur = getReg(ET_CUR1)- k_cur*ADC_CurrentEt1;
+  
+  m_flTosh.fl = k_vol;
+  setReg(m_flTosh.sh[0],K_VOL_HIGH); 
+  setReg(m_flTosh.sh[1],K_VOL_LOW); 
+  m_flTosh.fl = b_vol;
+  setReg(m_flTosh.sh[0],B_VOL_HIGH); 
+  setReg(m_flTosh.sh[1],B_VOL_LOW); 
+  m_flTosh.fl = k_cur;
+  setReg(m_flTosh.sh[0],K_CUR_HIGH); 
+  setReg(m_flTosh.sh[1],K_CUR_LOW); 
+  m_flTosh.fl = b_cur;
+  setReg(m_flTosh.sh[0],B_CUR_HIGH); 
+  setReg(m_flTosh.sh[1],B_CUR_LOW); 
+  
     PROBOY_LED_ON;
     HV_LED_ON;
     Delay(1000);

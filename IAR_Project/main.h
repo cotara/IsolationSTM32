@@ -10,3 +10,4 @@ void saveADC_ActualVoltageEt2();
 void saveADC_ActualCurrentEt1();
 void saveADC_ActualCurrentEt2();
 void saveToEEPROM();
+
