@@ -70,12 +70,6 @@ void adcVoltage_init(){
   /* Start ADC1 Software Conversion */ 
   ADC_SoftwareStartConvCmd(ADC1, ENABLE);
   
- 
-
-  /* Start ADC1 Software Conversion */ 
-  ADC_SoftwareStartConvCmd(ADC1, ENABLE);
-  
-  
 }
 
 void adcCurrent_init(){
@@ -128,8 +122,8 @@ void adcCurrent_init(){
   
   /* Enable ADC3 */
   ADC_Cmd(ADC3, ENABLE);
-
-  /* Enable ADC3 reset calibration register */   
+  
+   /* Enable ADC3 reset calibration register */   
   ADC_ResetCalibration(ADC3);
   /* Check the end of ADC3 reset calibration register */
   while(ADC_GetResetCalibrationStatus(ADC3));
@@ -139,6 +133,8 @@ void adcCurrent_init(){
   /* Check the end of ADC3 calibration */
   while(ADC_GetCalibrationStatus(ADC3));
   
+
+
   /* Start ADC3 Software Conversion */ 
   ADC_SoftwareStartConvCmd(ADC3, ENABLE);
 }

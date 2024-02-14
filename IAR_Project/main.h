@@ -11,3 +11,5 @@ void saveADC_ActualCurrentEt1();
 void saveADC_ActualCurrentEt2();
 void saveToEEPROM();
 
+void SaveSettings();
+void LoadSettings();

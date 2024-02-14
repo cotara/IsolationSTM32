@@ -10,13 +10,14 @@
 
 #include "main.h"
 #include <stdlib.h>
+#include "eeprom.h"
 
 int32_t actualVoltage=0;
 int32_t actualCurrent=0, maxDefectCurrent=0;
 int16_t ustVoltage=0;
 double regKoefCur = 0.6;
 double regKoef = 0.06;
-double CCR, minCCR,maxCCR = 9000000/PWM_FREQ;
+double CCR=0, minCCR=0,maxCCR =9000000/PWM_FREQ ;
 int32_t maxCurrent=250;                                                         //25 mkA*10
 double err;                                                                     //Рассогласование
 uint8_t defectDetected = 0;                                                     
@@ -27,16 +28,21 @@ extern uint8_t errorCounter;
 extern uint8_t readFlag;  
 uint32_t counter__ = 0;
 uint8_t adress=0;
-float k_vol=1.5, b_vol=0, k_cur=0.06, b_cur=0;
+float k_vol=1.54, b_vol=0, k_cur=0.67, b_cur=0;
 double ADC_ActualVoltage=0,ADC_VoltageEt1=0, ADC_VoltageEt2=0,ADC_ActualCurrent=0,ADC_CurrentEt1=0,ADC_CurrentEt2=0;
-
+double dutyCycle=0;
 typedef union {
   uint16_t sh[2];
   float fl;
 }flTosh_t;
 
-flTosh_t m_flTosh;
+typedef union {
+  uint8_t ch[4];
+  float fl;
+}flToCh_t;
 
+flTosh_t m_flTosh;
+flToCh_t m_flToCh;
 //Различия в пинах индикации (user_GPIO.c и user_GPIO.h) 
 int main()
 {    
@@ -58,7 +64,11 @@ int main()
   m_flTosh.fl = b_cur;
   setReg(m_flTosh.sh[0],B_CUR_HIGH); 
   setReg(m_flTosh.sh[1],B_CUR_LOW); 
-      
+  
+  
+  I2C_Configuration();                                                          //ИНИТ EEPROM        
+
+  LoadSettings() ;                                                              //Загрузка настроек
   //Стартовый "светофор"
   for (int i=0;i< 3;i++){
     PROBOY_LED_ON;
@@ -70,9 +80,10 @@ int main()
     HV_LED_OFF;
     Delay(100);
   }
+
   
-  minCCR = maxCCR*0.65;                                                          //Устанавливаем максимальную скважность 50%
-  CCR = maxCCR;                                                                 //Устанавливаем текущую скважность в 0
+  maxCCR = 0.35*maxCCR;                                                         //Устанавливаем максимальную скважность 50%
+  CCR = minCCR;                                                                 //Устанавливаем текущую скважность в 0
   
   tim3_pwm_init(PWM_FREQ);                                                      //Инит таймера шима с частотой PWM_FREQ
  
@@ -110,7 +121,7 @@ int main()
 //ОБНОВЛЯЕМ ДЕЙСТВУЮЩЕЕ НАПРЯЖЕНИЕ
 void updateVoltage(double val){
     ADC_ActualVoltage = val;
-    if(CCR == maxCCR)                                                           //Шим выключен
+    if(CCR == minCCR)                                                           //Шим выключен
       actualVoltage = 0;
     else
       //actualVoltage =(int32_t)(val*1.5584 + 6.5);
@@ -122,8 +133,8 @@ void updateVoltage(double val){
       else
         HV_LED_OFF;
     }
-    setReg(actualVoltage,ACTUAL_VOLTAGE_REG);                                   //Записываем в регистры действующее напряжение
-    //setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
+    //setReg(actualVoltage,ACTUAL_VOLTAGE_REG);                                   //Записываем в регистры действующее напряжение
+    setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
 }
 
 //ОБНОВЛЯЕМ ТОК
@@ -143,7 +154,7 @@ void updateCurrent(double val){
     //Т.к. ток в регистрах модбас хранится умноженный на 10, то можно просто вычесть текущее значение скорости
     //actualCurrent-=speed;    
     
-    //setReg(val,ACTUAL_CURR_REG);                                              //Чтобы выводить тугрики для калибровки
+    setReg((unsigned short)val,ACTUAL_CURR_REG);                                                //Чтобы выводить тугрики для калибровки
     
     if(actualCurrent>getReg(UST_CURR_REG) ){                                   //Проверка на дефект
       PROBOY_LED_ON;
@@ -205,19 +216,21 @@ uint8_t gerAdress(){
 void regulatorAct(){
 
     if(getReg(HIGH_VOL_REG) == 0 || ustVoltage==0)                              //Регулируем только если включено высокое и уставка не ноль
-      CCR=maxCCR;
-    if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
-      err = regKoefCur*(maxCurrent-actualCurrent);
-    else
-      err = regKoef*(ustVoltage-actualVoltage);
-    
-    CCR = CCR - err;
-         
-    if(CCR<minCCR) 
-      CCR = minCCR;
-    else if(CCR > maxCCR) 
-      CCR = maxCCR;
-
+      CCR=minCCR;
+    else{
+      if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
+        err = regKoefCur*(maxCurrent-actualCurrent);
+      else
+        err = regKoef*(ustVoltage-actualVoltage);
+      
+      CCR = CCR + err;
+      
+      if(CCR<minCCR) 
+        CCR = minCCR;
+      else if(CCR > maxCCR) 
+        CCR = maxCCR;
+    }
+    dutyCycle = CCR/maxCCR*100*0.35;
     setCcr3Tim((uint16_t)CCR);
 }
 
@@ -240,7 +253,9 @@ void saveToEEPROM(){
   b_vol = getReg(ET_VOL1)-k_vol*ADC_VoltageEt1;
   k_cur = (float)(getReg(ET_CUR2) - getReg(ET_CUR1)/(ADC_CurrentEt2 - ADC_CurrentEt1));
   b_cur = getReg(ET_CUR1)- k_cur*ADC_CurrentEt1;
-  
+
+  SaveSettings();                                                               //Сохранение настроек
+
   m_flTosh.fl = k_vol;
   setReg(m_flTosh.sh[0],K_VOL_HIGH); 
   setReg(m_flTosh.sh[1],K_VOL_LOW); 
@@ -253,12 +268,63 @@ void saveToEEPROM(){
   m_flTosh.fl = b_cur;
   setReg(m_flTosh.sh[0],B_CUR_HIGH); 
   setReg(m_flTosh.sh[1],B_CUR_LOW); 
+
+  PROBOY_LED_ON;
+  HV_LED_ON;
+  Delay(1000);
+  PROBOY_LED_OFF;
+  HV_LED_OFF;
+}
+
+void LoadSettings()
+{
+  m_flToCh.ch[0] = I2C_EE_ByteRead(0);
+  m_flToCh.ch[1] = I2C_EE_ByteRead(1);
+  m_flToCh.ch[2] = I2C_EE_ByteRead(2);
+  m_flToCh.ch[3] = I2C_EE_ByteRead(3);
+  k_vol = m_flToCh.fl;
   
-    PROBOY_LED_ON;
-    HV_LED_ON;
-    Delay(1000);
-    PROBOY_LED_OFF;
-    HV_LED_OFF;
+  m_flToCh.ch[0] = I2C_EE_ByteRead(4);
+  m_flToCh.ch[1] = I2C_EE_ByteRead(5);
+  m_flToCh.ch[2] = I2C_EE_ByteRead(6);
+  m_flToCh.ch[3] = I2C_EE_ByteRead(7);
+  b_vol = m_flToCh.fl;
+  
+  m_flToCh.ch[0] = I2C_EE_ByteRead(8);
+  m_flToCh.ch[1] = I2C_EE_ByteRead(9);
+  m_flToCh.ch[2] = I2C_EE_ByteRead(10);
+  m_flToCh.ch[3] = I2C_EE_ByteRead(11);
+  k_cur = m_flToCh.fl;
+  
+  m_flToCh.ch[0] = I2C_EE_ByteRead(12);
+  m_flToCh.ch[1] = I2C_EE_ByteRead(13);
+  m_flToCh.ch[2] = I2C_EE_ByteRead(14);
+  m_flToCh.ch[3] = I2C_EE_ByteRead(15);
+  b_cur = m_flToCh.fl;
+}
 
-
+void SaveSettings(){
+   m_flToCh.fl = k_vol;
+   I2C_EE_ByteWrite(m_flToCh.ch[0],0);
+   I2C_EE_ByteWrite(m_flToCh.ch[1],1);
+   I2C_EE_ByteWrite(m_flToCh.ch[2],2);
+   I2C_EE_ByteWrite(m_flToCh.ch[3],3);
+   
+   m_flToCh.fl = b_vol;
+   I2C_EE_ByteWrite(m_flToCh.ch[0],4);
+   I2C_EE_ByteWrite(m_flToCh.ch[1],5);
+   I2C_EE_ByteWrite(m_flToCh.ch[2],6);
+   I2C_EE_ByteWrite(m_flToCh.ch[3],7);
+   
+   m_flToCh.fl = k_cur;
+   I2C_EE_ByteWrite(m_flToCh.ch[0],8);
+   I2C_EE_ByteWrite(m_flToCh.ch[1],9);
+   I2C_EE_ByteWrite(m_flToCh.ch[2],10);
+   I2C_EE_ByteWrite(m_flToCh.ch[3],11);
+   
+   m_flToCh.fl = b_cur;
+   I2C_EE_ByteWrite(m_flToCh.ch[0],12);
+   I2C_EE_ByteWrite(m_flToCh.ch[1],13);
+   I2C_EE_ByteWrite(m_flToCh.ch[2],14);
+   I2C_EE_ByteWrite(m_flToCh.ch[3],15);
 }

@@ -39,7 +39,7 @@
         <stlinkResetStrategy>0</stlinkResetStrategy>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>3164557657</Checksum>
+        <Checksum>2090788810</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -99,11 +99,12 @@
         <Fmt0>{W}1:CRC16	4	0</Fmt0>
         <Fmt1>{W}42:ADC2ConvertedValue	3	0</Fmt1>
         <Fmt2>{W}42:dmaVoltageCounter	3	0</Fmt2>
-        <Fmt3>{W}42:errorCounter	3	0</Fmt3>
-        <Fmt4>{W}42:valveDiff	3	0</Fmt4>
-        <Fmt5>{W}42:valvePower	3	0</Fmt5>
-        <Fmt6>{W}42:waveform	3	0</Fmt6>
-        <Fmt7>{W}42:waveformCounter	3	0</Fmt7>
+        <Fmt3>{W}42:dutyCycle	0	10</Fmt3>
+        <Fmt4>{W}42:errorCounter	3	0</Fmt4>
+        <Fmt5>{W}42:valveDiff	3	0</Fmt5>
+        <Fmt6>{W}42:valvePower	3	0</Fmt6>
+        <Fmt7>{W}42:waveform	3	0</Fmt7>
+        <Fmt8>{W}42:waveformCounter	3	0</Fmt8>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>

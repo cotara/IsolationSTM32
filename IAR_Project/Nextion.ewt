@@ -2872,6 +2872,9 @@
             <name>$PROJ_DIR$\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</name>
         </file>
         <file>
@@ -2889,6 +2892,12 @@
     </group>
     <group>
         <name>User</name>
+        <file>
+            <name>$PROJ_DIR$\eeprom.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\eeprom.h</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\modbus.c</name>
         </file>

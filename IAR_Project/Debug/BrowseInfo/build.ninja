@@ -44,6 +44,11 @@ build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.xcl
   flags = C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c -D STM32F10X_HD -D USE_STDPERIPH_DRIVER -o C$:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I C$:\Ruslan\IAR\EX\IAR_Project\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.tmp
   rspfile_name = C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.xcl.rsp
 
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c -xcl_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.xcl -macro_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c -D STM32F10X_HD -D USE_STDPERIPH_DRIVER -o C$:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I C$:\Ruslan\IAR\EX\IAR_Project\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.tmp
+  rspfile_name = C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.xcl.rsp
+
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.xcl : COMPILER_XCL 
   xclcommand = -source_file C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c -xcl_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.xcl -macro_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
   flags = C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c -D STM32F10X_HD -D USE_STDPERIPH_DRIVER -o C$:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I C$:\Ruslan\IAR\EX\IAR_Project\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.tmp
@@ -63,6 +68,11 @@ build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.x
   xclcommand = -source_file C$:\Ruslan\IAR\EX\IAR_Project\system_stm32f10x.c -xcl_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.xcl -macro_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
   flags = C$:\Ruslan\IAR\EX\IAR_Project\system_stm32f10x.c -D STM32F10X_HD -D USE_STDPERIPH_DRIVER -o C$:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I C$:\Ruslan\IAR\EX\IAR_Project\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.tmp
   rspfile_name = C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.xcl.rsp
+
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Ruslan\IAR\EX\IAR_Project\eeprom.c -xcl_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.xcl -macro_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Ruslan\IAR\EX\IAR_Project\eeprom.c -D STM32F10X_HD -D USE_STDPERIPH_DRIVER -o C$:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I C$:\Ruslan\IAR\EX\IAR_Project\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc\ -I C$:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\ -On -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.tmp
+  rspfile_name = C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.xcl.rsp
 
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.xcl : COMPILER_XCL 
   xclcommand = -source_file C$:\Ruslan\IAR\EX\IAR_Project\modbus.c -xcl_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.xcl -macro_file C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
@@ -115,6 +125,10 @@ build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.pbi
 C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c
   flags = -out=C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.pbi -f C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.xcl
 
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.pbi : INDEXER C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.xcl |  $
+C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c
+  flags = -out=C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.pbi -f C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.xcl
+
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi : INDEXER C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.xcl |  $
 C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c
   flags = -out=C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi -f C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.xcl
@@ -130,6 +144,10 @@ C$:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driv
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi : INDEXER C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.xcl |  $
 C$:\Ruslan\IAR\EX\IAR_Project\system_stm32f10x.c
   flags = -out=C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi -f C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.xcl
+
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.pbi : INDEXER C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.xcl |  $
+C$:\Ruslan\IAR\EX\IAR_Project\eeprom.c
+  flags = -out=C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.pbi -f C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.xcl
 
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi : INDEXER C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.xcl |  $
 C$:\Ruslan\IAR\EX\IAR_Project\modbus.c
@@ -168,26 +186,31 @@ C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_dma.pbi $
 C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.pbi
   flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part0.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\misc.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_adc.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_dma.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_gpio.pbi
 
-build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi |  $
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.pbi |  $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi $
 C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_tim.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_usart.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi
-  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_tim.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_usart.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_usart.pbi
+  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_i2c.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_rcc.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_tim.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\stm32f10x_usart.pbi
 
-build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi |  $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_ADC.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_GPIO.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_TIMER.pbi
-  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_ADC.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_GPIO.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_TIMER.pbi
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi |  $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.pbi $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_ADC.pbi
+  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\STM32Std\system_stm32f10x.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\eeprom.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_ADC.pbi
 
-build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_USART.pbi |  $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\main.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\stm32f10x_it.pbi
-  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_USART.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\main.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\stm32f10x_it.pbi
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_GPIO.pbi |  $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_TIMER.pbi $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_USART.pbi $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\main.pbi
+  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_GPIO.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_TIMER.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\user_USART.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\main.pbi
+
+build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part4.pbi : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\stm32f10x_it.pbi
+  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part4.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\stm32f10x_it.pbi
 
 build C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion.pbd : PDBLINK C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part0.pbi |  $
 C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi $
 C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi $
-C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi
-  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion.pbd C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part0.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi $
+C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part4.pbi
+  flags = -M C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion.pbd C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part0.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part1.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part2.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part3.pbi C$:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\Nextion_part4.pbi
 
