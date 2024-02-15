@@ -1,5 +1,5 @@
 #define PWM_FREQ 500
-
+#define MAX_DUTY 40
 void updateVoltage(double val);
 void updateCurrent(double val);
 

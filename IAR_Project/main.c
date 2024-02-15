@@ -16,7 +16,7 @@ int32_t actualVoltage=0;
 int32_t actualCurrent=0, maxDefectCurrent=0;
 int16_t ustVoltage=0;
 double regKoefCur = 0.6;
-double regKoef = 0.06;
+double regKoef = 0.04;
 double CCR=0, minCCR=0,maxCCR =9000000/PWM_FREQ ;
 int32_t maxCurrent=250;                                                         //25 mkA*10
 double err;                                                                     //Рассогласование
@@ -52,6 +52,10 @@ int main()
   
   GPIO_init();
   
+  I2C_Configuration();                                                          //ИНИТ EEPROM        
+
+  LoadSettings() ;   
+  
   m_flTosh.fl = k_vol;
   setReg(m_flTosh.sh[0],K_VOL_HIGH); 
   setReg(m_flTosh.sh[1],K_VOL_LOW); 
@@ -66,9 +70,7 @@ int main()
   setReg(m_flTosh.sh[1],B_CUR_LOW); 
   
   
-  I2C_Configuration();                                                          //ИНИТ EEPROM        
-
-  LoadSettings() ;                                                              //Загрузка настроек
+                                                           //Загрузка настроек
   //Стартовый "светофор"
   for (int i=0;i< 3;i++){
     PROBOY_LED_ON;
@@ -82,7 +84,7 @@ int main()
   }
 
   
-  maxCCR = 0.35*maxCCR;                                                         //Устанавливаем максимальную скважность 50%
+  maxCCR = MAX_DUTY/100.0*maxCCR;                                                         //Устанавливаем максимальную скважность 50%
   CCR = minCCR;                                                                 //Устанавливаем текущую скважность в 0
   
   tim3_pwm_init(PWM_FREQ);                                                      //Инит таймера шима с частотой PWM_FREQ
@@ -108,10 +110,8 @@ int main()
         START_LINE;
         setReg(0,STOP_LINE_FLAG);
       }
-      if(getReg(EEPROM_SET)){
+      if(getReg(EEPROM_SET)!=0){
         saveToEEPROM();
-
-          
         setReg(0,EEPROM_SET);
       }
         
@@ -133,8 +133,8 @@ void updateVoltage(double val){
       else
         HV_LED_OFF;
     }
-    //setReg(actualVoltage,ACTUAL_VOLTAGE_REG);                                   //Записываем в регистры действующее напряжение
-    setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
+    setReg(actualVoltage,ACTUAL_VOLTAGE_REG);                                   //Записываем в регистры действующее напряжение
+    //setReg(val,ACTUAL_VOLTAGE_REG);                                           //Чтобы выводить тугрики для калибровки
 }
 
 //ОБНОВЛЯЕМ ТОК
@@ -186,7 +186,7 @@ void updateCurrent(double val){
        }
     }
     else{
-      setReg(actualCurrent,ACTUAL_CURR_REG);                                    //Иначе, храним актуальный ток
+      //setReg(actualCurrent,ACTUAL_CURR_REG);                                    //Иначе, храним актуальный ток
     }  
 
 }
@@ -230,7 +230,7 @@ void regulatorAct(){
       else if(CCR > maxCCR) 
         CCR = maxCCR;
     }
-    dutyCycle = CCR/maxCCR*100*0.35;
+    dutyCycle = CCR/maxCCR*MAX_DUTY;
     setCcr3Tim((uint16_t)CCR);
 }
 
@@ -248,14 +248,20 @@ void saveADC_ActualCurrentEt2(){
 }
 //Функции записи коэффициентов в EEPROM
 void saveToEEPROM(){
+  unsigned short calibCommand = getReg(EEPROM_SET);
+  
+  if(calibCommand==1){
+    k_vol = ((double)getReg(ET_VOL2) - (double)getReg(ET_VOL1))/(ADC_VoltageEt2 - ADC_VoltageEt1);
+    b_vol = getReg(ET_VOL1)-k_vol*ADC_VoltageEt1;
+  }
+  else if(calibCommand==2){
+    k_cur = (float)(getReg(ET_CUR2) - getReg(ET_CUR1)/(ADC_CurrentEt2 - ADC_CurrentEt1));
+    b_cur = getReg(ET_CUR1)- k_cur*ADC_CurrentEt1;
+  }
+    
+  SaveSettings();                                                               //Сохранение настроек в EEPROM
 
-  k_vol = ((double)getReg(ET_VOL2) - (double)getReg(ET_VOL1))/(ADC_VoltageEt2 - ADC_VoltageEt1);
-  b_vol = getReg(ET_VOL1)-k_vol*ADC_VoltageEt1;
-  k_cur = (float)(getReg(ET_CUR2) - getReg(ET_CUR1)/(ADC_CurrentEt2 - ADC_CurrentEt1));
-  b_cur = getReg(ET_CUR1)- k_cur*ADC_CurrentEt1;
-
-  SaveSettings();                                                               //Сохранение настроек
-
+  //Пишем коэффициенты в модбас, чтобы было видно в проге
   m_flTosh.fl = k_vol;
   setReg(m_flTosh.sh[0],K_VOL_HIGH); 
   setReg(m_flTosh.sh[1],K_VOL_LOW); 

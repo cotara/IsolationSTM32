@@ -123010,7 +123010,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_ADC.c@2875@F@adcCurrent_init@ADC_InitStructure",
+    "ID": "c:user_ADC.c@2883@F@adcCurrent_init@ADC_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "ADC_InitStructure",
@@ -123024,7 +123024,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_ADC.c@2913@F@adcCurrent_init@DMA_InitStructure",
+    "ID": "c:user_ADC.c@2921@F@adcCurrent_init@DMA_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "DMA_InitStructure",
@@ -123038,7 +123038,7 @@
     "scope": null
   },
   {
-    "ID": "c:user_ADC.c@2951@F@adcCurrent_init@GPIO_InitStructure",
+    "ID": "c:user_ADC.c@2959@F@adcCurrent_init@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
@@ -123626,6 +123626,118 @@
     "scope": null
   },
   {
+    "ID": "c:eeprom.h@95@macro@EEPROM_HW_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_HW_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "EEPROM_HW_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:eeprom.h@157@macro@I2C_EE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "I2C_EE",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_EE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_EE_ByteRead",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t I2C_EE_ByteRead(uint16_t)",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_EE_ByteRead",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_EE_ByteRead",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t I2C_EE_ByteRead(uint16_t)",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_EE_ByteRead",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_EE_ByteWrite",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_EE_ByteWrite(uint8_t, uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_EE_ByteWrite",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_EE_ByteWrite",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_EE_ByteWrite(uint8_t, uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_EE_ByteWrite",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_Configuration",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Configuration(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_Configuration",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@I2C_Configuration",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Configuration(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
+    },
+    "name": "I2C_Configuration",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:modbus.h@50@macro@REG_SIZE",
     "What": "MacroDef",
     "defdec": "Def",
@@ -124200,118 +124312,6 @@
     "scope": null
   },
   {
-    "ID": "c:eeprom.h@95@macro@EEPROM_HW_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EEPROM_HW_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "EEPROM_HW_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:eeprom.h@157@macro@I2C_EE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "I2C_EE",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_EE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_EE_ByteRead",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t I2C_EE_ByteRead(uint16_t)",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_EE_ByteRead",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_EE_ByteRead",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t I2C_EE_ByteRead(uint16_t)",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_EE_ByteRead",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_EE_ByteWrite",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_EE_ByteWrite(uint8_t, uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_EE_ByteWrite",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_EE_ByteWrite",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_EE_ByteWrite(uint8_t, uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_EE_ByteWrite",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_Configuration",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_Configuration(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_Configuration",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_Configuration",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_Configuration(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
-    },
-    "name": "I2C_Configuration",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@Delay",
     "What": "Function",
     "defdec": "Dec",
@@ -124574,6 +124574,20 @@
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
     },
     "name": "PWM_FREQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:main.h@30@macro@MAX_DUTY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MAX_DUTY",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.h"
+    },
+    "name": "MAX_DUTY",
     "origin": "user_include",
     "scope": null
   },
@@ -125488,6 +125502,34 @@
     "scope": null
   },
   {
+    "ID": "c:@F@GPIO_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_init(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
+    },
+    "name": "GPIO_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_GPIO.c@112@F@GPIO_init@GPIO_InitStructure",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "GPIO_InitStructure",
+    "location": {
+      "column": "20",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
+    },
+    "name": "GPIO_InitStructure",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:user_GPIO.h@31@macro@STOP_LINE",
     "What": "MacroDef",
     "defdec": "Def",
@@ -125611,34 +125653,6 @@
     },
     "name": "GPIO_init",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void GPIO_init(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
-    },
-    "name": "GPIO_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_GPIO.c@112@F@GPIO_init@GPIO_InitStructure",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "GPIO_InitStructure",
-    "location": {
-      "column": "20",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_GPIO.c"
-    },
-    "name": "GPIO_InitStructure",
-    "origin": "project_file",
     "scope": null
   },
   {
@@ -126234,13 +126248,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2236@F@main@i",
+    "ID": "c:main.c@2242@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "12",
-      "line": "73",
+      "line": "75",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "i",
@@ -126290,7 +126304,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9112@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@9119@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
@@ -126304,7 +126318,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9491@F@gerAdress@pin0",
+    "ID": "c:main.c@9498@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
@@ -126318,7 +126332,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9491@F@gerAdress@pin1",
+    "ID": "c:main.c@9498@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
@@ -126332,7 +126346,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9491@F@gerAdress@pin2",
+    "ID": "c:main.c@9498@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
@@ -126346,7 +126360,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9491@F@gerAdress@pin3",
+    "ID": "c:main.c@9498@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
@@ -126444,13 +126458,27 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@10954@F@saveToEEPROM@calibCommand",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "calibCommand",
+    "location": {
+      "column": "18",
+      "line": "251",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
+    },
+    "name": "calibCommand",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@LoadSettings",
     "What": "Function",
     "defdec": "Def",
     "display": "void LoadSettings(void)",
     "location": {
       "column": "6",
-      "line": "279",
+      "line": "285",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "LoadSettings",
@@ -126464,7 +126492,7 @@
     "display": "void SaveSettings(void)",
     "location": {
       "column": "6",
-      "line": "306",
+      "line": "312",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
     "name": "SaveSettings",
