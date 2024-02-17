@@ -15,10 +15,10 @@
 int32_t actualVoltage=0;
 int32_t actualCurrent=0, maxDefectCurrent=0;
 int16_t ustVoltage=0;
-double regKoefCur = 0.6;
-double regKoef = 0.04;
+double regKoefCur = 0.1, regKoef = 0.05;
+
 double CCR=0, minCCR=0,maxCCR =9000000/PWM_FREQ ;
-int32_t maxCurrent=250;                                                         //25 mkA*10
+int32_t maxCurrent=300;                                                         //25 mkA*10
 double err;                                                                     //Рассогласование
 uint8_t defectDetected = 0;                                                     
 int32_t defectPos=0;
@@ -28,7 +28,8 @@ extern uint8_t errorCounter;
 extern uint8_t readFlag;  
 uint32_t counter__ = 0;
 uint8_t adress=0;
-float k_vol=1.54, b_vol=0, k_cur=0.67, b_cur=0;
+float k_vol, b_vol, k_cur, b_cur;
+float k_vol_default=1, b_vol_default=50, k_cur_default=0.1, b_cur_default=0;
 double ADC_ActualVoltage=0,ADC_VoltageEt1=0, ADC_VoltageEt2=0,ADC_ActualCurrent=0,ADC_CurrentEt1=0,ADC_CurrentEt2=0;
 double dutyCycle=0;
 typedef union {
@@ -50,11 +51,14 @@ int main()
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency /1000);
   
+  adress=gerAdress();                                                           //Получаем адрес прибора
+  modbusInit(adress);                                                           //Инит модбас адресом
+  
   GPIO_init();
   
   I2C_Configuration();                                                          //ИНИТ EEPROM        
-
-  LoadSettings() ;   
+  
+  LoadSettings();   
   
   m_flTosh.fl = k_vol;
   setReg(m_flTosh.sh[0],K_VOL_HIGH); 
@@ -83,8 +87,7 @@ int main()
     Delay(100);
   }
 
-  
-  maxCCR = MAX_DUTY/100.0*maxCCR;                                                         //Устанавливаем максимальную скважность 50%
+  maxCCR = MAX_DUTY/100.0*maxCCR;                                               //Устанавливаем максимальную скважность 50%
   CCR = minCCR;                                                                 //Устанавливаем текущую скважность в 0
   
   tim3_pwm_init(PWM_FREQ);                                                      //Инит таймера шима с частотой PWM_FREQ
@@ -96,25 +99,18 @@ int main()
   
   tim4_init();                                                                  //Инит таймера регулятора
    
-  adress=gerAdress();                                                           //Получаем адрес прибора
-  modbusInit(adress);                                                           //Инит модбас адресом
+
   tim2_init();                                                                  //Юарт фейл-контроль
   usart_init();                                                                 //Инит юарт
   tim5_init();                                                                  //Контроль обрыва связи
   
   while(1){
       ustVoltage = (int16_t)getReg(UST_VOLTAGE_REG);                            //Обновляем уставку из регистров
-      if(getReg(STOP_LINE_FLAG)){                                               //Если в регистре появилась команда на стоп, дёргаем релюшку на секунду
-        STOP_LINE;
-        Delay(1000);
-        START_LINE;
-        setReg(0,STOP_LINE_FLAG);
-      }
+
       if(getReg(EEPROM_SET)!=0){
         saveToEEPROM();
         setReg(0,EEPROM_SET);
       }
-        
   }
 }
 
@@ -141,23 +137,20 @@ void updateVoltage(double val){
 void updateCurrent(double val){
     ADC_ActualCurrent = val;
     
-//    if(val<637){                                                                //637 соответствует 4.37 мкА, что соответствует 437 В. То есть до 437В используем одну формулу, а потом другую
-//      actualCurrent =(int32_t)(0.0768*val-4.5);
-//      if(actualCurrent<0)       actualCurrent=0;
-//    }
-//    else
-//      actualCurrent =(int32_t)(0.0665*val+1.5);
+    actualCurrent = (int16_t)(k_cur*val+b_cur);
+    if(actualCurrent<0)       actualCurrent=0;
+    //actualCurrent = val*3.3/4096.0/11*1000*10;                                  //(Напряжение на АЦП/11000) - это ток в амперах. Умножаем на 10^6 - это микроамперы. И умножаем на 10 - это для передачи
     
-    actualCurrent = (int32_t)(k_cur*val+b_cur);
     
     //Ток записываем с поправкой на скорость  из расчета, что при 100 м/мин паразитный ток 10 мкА.
     //Т.к. ток в регистрах модбас хранится умноженный на 10, то можно просто вычесть текущее значение скорости
     //actualCurrent-=speed;    
     
-    setReg((unsigned short)val,ACTUAL_CURR_REG);                                                //Чтобы выводить тугрики для калибровки
+    //setReg((unsigned short)val,ACTUAL_CURR_REG);                                //Чтобы выводить тугрики для калибровки
     
-    if(actualCurrent>getReg(UST_CURR_REG) ){                                   //Проверка на дефект
+    if(actualCurrent>getReg(UST_CURR_REG) ){                                    //Проверка на дефект
       PROBOY_LED_ON;
+      STOP_LINE;
       if(!defectDetected){                                                      //Если это первая точка дефекта
         defectDetected=1;
         readFlag=0;                                                             //Новый дефект и он еще не отправлен
@@ -175,6 +168,7 @@ void updateCurrent(double val){
     else{ 
       defectDetected=0;
       PROBOY_LED_OFF;
+      START_LINE;
     }
     
     //Что запихаем в регистр на отправку?
@@ -186,7 +180,7 @@ void updateCurrent(double val){
        }
     }
     else{
-      //setReg(actualCurrent,ACTUAL_CURR_REG);                                    //Иначе, храним актуальный ток
+      setReg(actualCurrent,ACTUAL_CURR_REG);                                    //Иначе, храним актуальный ток
     }  
 
 }
@@ -218,7 +212,8 @@ void regulatorAct(){
     if(getReg(HIGH_VOL_REG) == 0 || ustVoltage==0)                              //Регулируем только если включено высокое и уставка не ноль
       CCR=minCCR;
     else{
-      if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
+      //if(actualCurrent >= maxCurrent && ustVoltage>actualVoltage)                   //If there is an overcurrent and the voltage setting is higher than the real values
+      if(actualCurrent >= maxCurrent)   
         err = regKoefCur*(maxCurrent-actualCurrent);
       else
         err = regKoef*(ustVoltage-actualVoltage);
@@ -246,6 +241,9 @@ void saveADC_ActualCurrentEt1(){
 void saveADC_ActualCurrentEt2(){
   ADC_CurrentEt2 = ADC_ActualCurrent;
 }
+void update_maxSystemCur(){
+  maxCurrent = getReg(MAX_CUR);
+}
 //Функции записи коэффициентов в EEPROM
 void saveToEEPROM(){
   unsigned short calibCommand = getReg(EEPROM_SET);
@@ -255,10 +253,16 @@ void saveToEEPROM(){
     b_vol = getReg(ET_VOL1)-k_vol*ADC_VoltageEt1;
   }
   else if(calibCommand==2){
-    k_cur = (float)(getReg(ET_CUR2) - getReg(ET_CUR1)/(ADC_CurrentEt2 - ADC_CurrentEt1));
+    k_cur = (float)((double)getReg(ET_CUR2) - (double)getReg(ET_CUR1))/(ADC_CurrentEt2 - ADC_CurrentEt1);
     b_cur = getReg(ET_CUR1)- k_cur*ADC_CurrentEt1;
   }
-    
+  
+  else if(calibCommand==3){                                                      //Восстановить настройки по умолчанию
+    k_vol = k_vol_default;
+    b_vol = b_vol_default;
+    k_cur = k_cur_default;
+    b_cur = b_cur_default;
+  }
   SaveSettings();                                                               //Сохранение настроек в EEPROM
 
   //Пишем коэффициенты в модбас, чтобы было видно в проге

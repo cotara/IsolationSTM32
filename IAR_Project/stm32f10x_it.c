@@ -85,7 +85,7 @@ void DMA1_Channel1_IRQHandler(void){
   if((DMA_GetITStatus(DMA1_IT_TC1) == SET)){ 
     adcVoltageSum+=ADC1ConvertedValue;
     adcVoltageCounter++;
-    if(adcVoltageCounter==adcVoltageSample){
+    if(adcVoltageCounter>=adcVoltageSample){
       voltageADCValue = adcVoltageSum/adcVoltageSample;                         //Average Voltage
       updateVoltage(voltageADCValue);
       adcVoltageCounter=0;
@@ -102,8 +102,8 @@ void DMA2_Channel4_5_IRQHandler(void){
       //currentBuf[adcCurrentCounter]=ADC3ConvertedValue;
       adcCurrentSum+=ADC3ConvertedValue;
       adcCurrentCounter++;
-      if(adcCurrentCounter==adcCurrentSample){
-        currentADCValue = adcCurrentSum/(adcCurrentSample/10.0);                //Average Current*10
+      if(adcCurrentCounter>=adcCurrentSample){
+        currentADCValue = (double)adcCurrentSum/(adcCurrentSample/10.0);                //Average Current*10
                                  
         updateCurrent(currentADCValue);
         adcCurrentCounter=0;

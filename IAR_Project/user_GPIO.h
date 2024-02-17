@@ -17,4 +17,5 @@
 
 #define PROBOY_LED_OFF GPIO_SetBits(GPIOD,GPIO_Pin_5)                                //ӯ𠢫孨報嬨񲮰
 #define PROBOY_LED_ON GPIO_ResetBits(GPIOD,GPIO_Pin_5)
+#define PROBOY_LED_TOOGLE GPIOD->ODR ^= GPIO_Pin_5
 void GPIO_init(void);

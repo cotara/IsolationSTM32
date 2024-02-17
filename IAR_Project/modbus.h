@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include "main.h"
 
-#define REG_SIZE 23
+#define REG_SIZE 24
 
 #define TYPE_MODEL_REG 0x00
 #define ACTUAL_VOLTAGE_REG 0x01
@@ -26,6 +26,7 @@
 #define K_CUR_LOW      0x14
 #define B_CUR_HIGH     0x15
 #define B_CUR_LOW      0x16
+#define MAX_CUR        0x17
 
 void modbusInit(uint8_t add);
 uint8_t setReg(uint16_t val, uint8_t index);

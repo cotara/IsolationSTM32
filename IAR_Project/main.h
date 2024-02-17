@@ -9,6 +9,7 @@ void saveADC_ActualVoltageEt1();
 void saveADC_ActualVoltageEt2();
 void saveADC_ActualCurrentEt1();
 void saveADC_ActualCurrentEt2();
+void update_maxSystemCur();
 void saveToEEPROM();
 
 void SaveSettings();

@@ -15,7 +15,7 @@ int32_t position=0;
 int32_t speed=0;
 void modbusInit(uint8_t add){
   modAdd = add;
-  regs[0] = (4 << 8) + 1;                                                         //Type + model
+  regs[0] = (4 << 8) + 1;                                                       //Type + model
   regs[1]=0;                                                                    // действующее значение напряжения
   regs[2]=0;                                                                    //действующая сила тока
   regs[3]=0;                                                                    //количество дефектов
@@ -31,7 +31,16 @@ void modbusInit(uint8_t add){
   regs[12]=0;                                                                   //Эталонный ток 1
   regs[13]=0;                                                                   //Эталонный ток 2
   regs[14]=0;                                                                   //Записать значение в EEPROM
+  regs[15]=0;                                                                   //Коэффициенты калибровки напряжения
+  regs[16]=0;
+  regs[17]=0;
+  regs[18]=0;
+  regs[19]=0;                                                                   //Коэффициенты калибровки тока
+  regs[20]=0;
+  regs[21]=0;
+  regs[22]=0;
   
+  regs[23]=300;                                                                 //Максимальный ток в системе
 }
 uint8_t setReg(uint16_t val, uint8_t index){
     if(index>REG_SIZE-1) return 1;
@@ -118,12 +127,14 @@ uint8_t modbus6(){
     }
     if(rxBuf[3] == 0xA)                                                        //Установили etVol1
        saveADC_ActualVoltageEt1();
-     else if(rxBuf[3] == 0xB)                                                        //Установили etVol1
+     else if(rxBuf[3] == 0xB)                                                   //Установили etVol2
        saveADC_ActualVoltageEt2();
-     else if(rxBuf[3] == 0xC)                                                        //Установили etVol1
+     else if(rxBuf[3] == 0xC)                                                        //Установили etCur1
        saveADC_ActualCurrentEt1();
-     else if(rxBuf[3] == 0xD)                                                        //Установили etVol1
-       saveADC_ActualCurrentEt2();
+     else if(rxBuf[3] == 0xD)                                                        //Установили etCur2
+       saveADC_ActualCurrentEt2(); 
+     else if(rxBuf[3] == 0x17)                                                        //Установили максимальный ток в системе
+       update_maxSystemCur();
      
     USART1_put_string(txBuf,8);
       return 0;
