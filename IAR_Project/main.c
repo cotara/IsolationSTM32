@@ -15,7 +15,7 @@
 int32_t actualVoltage=0;
 int32_t actualCurrent=0, maxDefectCurrent=0;
 int16_t ustVoltage=0;
-double regKoefCur = 0.1, regKoef = 0.05;
+double regKoefCur = 0.1, regKoef = 0.03;
 
 double CCR=0, minCCR=0,maxCCR =9000000/PWM_FREQ ;
 int32_t maxCurrent=300;                                                         //25 mkA*10
@@ -29,7 +29,7 @@ extern uint8_t readFlag;
 uint32_t counter__ = 0;
 uint8_t adress=0;
 float k_vol, b_vol, k_cur, b_cur;
-float k_vol_default=1, b_vol_default=50, k_cur_default=0.1, b_cur_default=0;
+float k_vol_default=1, b_vol_default=50, k_cur_default=0.07, b_cur_default=3;
 double ADC_ActualVoltage=0,ADC_VoltageEt1=0, ADC_VoltageEt2=0,ADC_ActualCurrent=0,ADC_CurrentEt1=0,ADC_CurrentEt2=0;
 double dutyCycle=0;
 typedef union {

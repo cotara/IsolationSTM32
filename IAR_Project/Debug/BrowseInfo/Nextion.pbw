@@ -122806,7 +122806,7 @@
     "display": "uint8_t modbus16(void)",
     "location": {
       "column": "9",
-      "line": "143",
+      "line": "150",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "modbus16",
@@ -122814,13 +122814,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@6225@F@modbus16@tempCount",
+    "ID": "c:modbus.c@6358@F@modbus16@tempCount",
     "What": "Variable",
     "defdec": "Def",
     "display": "tempCount",
     "location": {
       "column": "7",
-      "line": "144",
+      "line": "151",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "tempCount",
@@ -122828,13 +122828,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@6603@F@modbus16@countSet",
+    "ID": "c:modbus.c@6719@F@modbus16@countSet",
     "What": "Variable",
     "defdec": "Def",
     "display": "countSet",
     "location": {
       "column": "14",
-      "line": "155",
+      "line": "162",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "countSet",
@@ -122842,13 +122842,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@6744@F@modbus16@i",
+    "ID": "c:modbus.c@6860@F@modbus16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "157",
+      "line": "164",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "i",
@@ -122862,7 +122862,7 @@
     "display": "unsigned short crc16(unsigned char *, unsigned short)",
     "location": {
       "column": "16",
-      "line": "173",
+      "line": "182",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "crc16",
@@ -122870,13 +122870,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@7221@F@crc16@crc",
+    "ID": "c:modbus.c@7359@F@crc16@crc",
     "What": "Variable",
     "defdec": "Def",
     "display": "crc",
     "location": {
       "column": "18",
-      "line": "175",
+      "line": "184",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "crc",
@@ -122884,13 +122884,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@7258@F@crc16@i",
+    "ID": "c:modbus.c@7396@F@crc16@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "11",
-      "line": "176",
+      "line": "185",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "i",
@@ -122898,13 +122898,13 @@
     "scope": null
   },
   {
-    "ID": "c:modbus.c@7313@F@crc16@j",
+    "ID": "c:modbus.c@7451@F@crc16@j",
     "What": "Variable",
     "defdec": "Def",
     "display": "j",
     "location": {
       "column": "13",
-      "line": "179",
+      "line": "188",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.c"
     },
     "name": "j",
@@ -123454,6 +123454,258 @@
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\eeprom.h"
     },
     "name": "I2C_Configuration",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay(volatile uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "Delay",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Delay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Delay(volatile uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "Delay",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TimingDelay_Decrement",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TimingDelay_Decrement(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "TimingDelay_Decrement",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TimingDelay_Decrement",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TimingDelay_Decrement(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "TimingDelay_Decrement",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim2_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim2_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim2_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim2_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_pwm_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_pwm_init(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_pwm_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_pwm_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_pwm_init(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_pwm_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_init(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim3_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim3_init(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim3_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@getCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t getCcr3Tim(void)",
+    "location": {
+      "column": "10",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "getCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@getCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t getCcr3Tim(void)",
+    "location": {
+      "column": "10",
+      "line": "9",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "getCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@setCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void setCcr3Tim(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "setCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@setCcr3Tim",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void setCcr3Tim(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "setCcr3Tim",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim4_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim4_init(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim4_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim4_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim4_init(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim4_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim5_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim5_init(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim5_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@tim5_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void tim5_init(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
+    },
+    "name": "tim5_init",
     "origin": "user_include",
     "scope": null
   },
@@ -124322,258 +124574,6 @@
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\modbus.h"
     },
     "name": "crc16",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Delay(volatile uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "Delay",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Delay",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Delay(volatile uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "4",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "Delay",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TimingDelay_Decrement",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void TimingDelay_Decrement(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "TimingDelay_Decrement",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TimingDelay_Decrement",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void TimingDelay_Decrement(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "TimingDelay_Decrement",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim2_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim2_init(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim2_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim2_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim2_init(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim2_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_pwm_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_pwm_init(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_pwm_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_pwm_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_pwm_init(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_pwm_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_init(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim3_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim3_init(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim3_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@getCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t getCcr3Tim(void)",
-    "location": {
-      "column": "10",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "getCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@getCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t getCcr3Tim(void)",
-    "location": {
-      "column": "10",
-      "line": "9",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "getCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@setCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void setCcr3Tim(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "setCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@setCcr3Tim",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void setCcr3Tim(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "setCcr3Tim",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim4_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim4_init(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim4_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim4_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim4_init(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim4_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim5_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim5_init(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim5_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@tim5_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void tim5_init(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\user_TIMER.h"
-    },
-    "name": "tim5_init",
     "origin": "user_include",
     "scope": null
   },
@@ -126081,7 +126081,7 @@
     "defdec": "Def",
     "display": "b_cur_default",
     "location": {
-      "column": "61",
+      "column": "62",
       "line": "32",
       "path": "C:\\Ruslan\\IAR\\EX\\IAR_Project\\main.c"
     },
@@ -126346,7 +126346,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1464@F@main@RCC_Clocks",
+    "ID": "c:main.c@1465@F@main@RCC_Clocks",
     "What": "Variable",
     "defdec": "Def",
     "display": "RCC_Clocks",
@@ -126360,7 +126360,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2551@F@main@i",
+    "ID": "c:main.c@2552@F@main@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -126416,7 +126416,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@8752@F@gerAdress@GPIO_InitStructure",
+    "ID": "c:main.c@8753@F@gerAdress@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
@@ -126430,7 +126430,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9131@F@gerAdress@pin0",
+    "ID": "c:main.c@9132@F@gerAdress@pin0",
     "What": "Variable",
     "defdec": "Def",
     "display": "pin0",
@@ -126444,7 +126444,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9131@F@gerAdress@pin1",
+    "ID": "c:main.c@9132@F@gerAdress@pin1",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin1",
@@ -126458,7 +126458,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9131@F@gerAdress@pin2",
+    "ID": "c:main.c@9132@F@gerAdress@pin2",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin2",
@@ -126472,7 +126472,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9131@F@gerAdress@pin3",
+    "ID": "c:main.c@9132@F@gerAdress@pin3",
     "What": "Variable",
     "defdec": "Dec",
     "display": "pin3",
@@ -126584,7 +126584,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10696@F@saveToEEPROM@calibCommand",
+    "ID": "c:main.c@10697@F@saveToEEPROM@calibCommand",
     "What": "Variable",
     "defdec": "Def",
     "display": "calibCommand",

@@ -32,3 +32,9 @@
 1	208	7298762470558599	C:/Ruslan/IAR/EX/IAR_Project/Debug/Obj/main.o	7501a27193e9a68d
 209	267	7298762471156601	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.out	d907e513ce056659
 268	275	7298762471296131	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.hex	33d11e0a8f1910b3
+1	261	7302006433775522	C:/Ruslan/IAR/EX/IAR_Project/Debug/Obj/main.o	7501a27193e9a68d
+261	424	7302006435535761	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.out	d907e513ce056659
+426	460	7302006435940647	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.hex	33d11e0a8f1910b3
+1	218	7302070603088522	C:/Ruslan/IAR/EX/IAR_Project/Debug/Obj/User/modbus.o	d1f0b8b67cbfd062
+219	330	7302070604368538	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.out	d907e513ce056659
+332	348	7302070604658546	C:/Ruslan/IAR/EX/IAR_Project/Debug/Exe/Nextion.hex	33d11e0a8f1910b3

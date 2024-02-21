@@ -110,21 +110,16 @@ uint8_t modbus6(){
    RXi=0; 
    txBuf[0] = modAdd;
    txBuf[1] = 0x06;
-   txBuf[2] = rxBuf[2];
-   txBuf[3] = rxBuf[3];
-   txBuf[4] = rxBuf[4];
-   txBuf[5] = rxBuf[5];  
+   CRC16 = crc16(rxBuf,6);
    
-   CRC16 = crc16(txBuf,6);
-   
-   txBuf[6] = CRC16&0xFF;                                                       //CRC L
-   txBuf[7] = CRC16>>8;                                                         //CRC H
-   
-   if((txBuf[6] == rxBuf[6]) && (txBuf[7] == rxBuf[7]))                         //совпало срс
-    {
-      if(rxBuf[3]<REG_SIZE)                                                     //запись значения по адресу
-        regs[rxBuf[3]] = (rxBuf[4]<<8)|rxBuf[5];    
-    }
+   if(((CRC16&0xFF) == rxBuf[6] )&& ((CRC16>>8) == rxBuf[7])){                         //совпало срс
+    txBuf[2] = rxBuf[2];
+    txBuf[3] = rxBuf[3];
+    txBuf[4] = rxBuf[4];
+    txBuf[5] = rxBuf[5]; 
+    if(rxBuf[3]<REG_SIZE)                                                     //запись значения по адресу
+      regs[rxBuf[3]] = (rxBuf[4]<<8)|rxBuf[5];    
+    
     if(rxBuf[3] == 0xA)                                                        //РЈСЃС‚Р°РЅРѕРІРёР»Рё etVol1
        saveADC_ActualVoltageEt1();
      else if(rxBuf[3] == 0xB)                                                   //РЈСЃС‚Р°РЅРѕРІРёР»Рё etVol2
@@ -135,7 +130,19 @@ uint8_t modbus6(){
        saveADC_ActualCurrentEt2(); 
      else if(rxBuf[3] == 0x17)                                                        //РЈСЃС‚Р°РЅРѕРІРёР»Рё РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ С‚РѕРє РІ СЃРёСЃС‚РµРјРµ
        update_maxSystemCur();
+   }
+   else{
+      txBuf[2] = 0;
+      txBuf[3] = 0;
+      txBuf[4] = 0;
+      txBuf[5] = 0; 
+   }
      
+   CRC16 = crc16(txBuf,6);
+   
+   txBuf[6] = CRC16&0xFF;                                                       //CRC L
+   txBuf[7] = CRC16>>8;                                                         //CRC H
+   
     USART1_put_string(txBuf,8);
       return 0;
 }           
@@ -144,13 +151,13 @@ uint8_t modbus16(){
   int tempCount = RXi-2;
   RXi=0;
   CRC16 = crc16(rxBuf,tempCount);
-  
+  txBuf[0] = modAdd;
+  txBuf[1] = 0x10;
+  txBuf[2] = rxBuf[2];
+  txBuf[3] = rxBuf[3];
+  txBuf[4] = rxBuf[4];
   if(((CRC16&0xFF) == rxBuf[tempCount]) && (CRC16>>8 == rxBuf[tempCount+1])){                         //совпало срс
-     txBuf[0] = modAdd;
-     txBuf[1] = 0x10;
-     txBuf[2] = rxBuf[2];
-     txBuf[3] = rxBuf[3];
-     txBuf[4] = rxBuf[4];
+
                                                     
      uint8_t countSet=0;
      if(rxBuf[3]<REG_SIZE){                                                     //запись значения по адресу
@@ -161,11 +168,13 @@ uint8_t modbus16(){
      }
      
      
-     txBuf[5] = countSet;
-     CRC16 = crc16(txBuf,6);
-     txBuf[6] = CRC16&0xFF;                                                       //CRC L
-     txBuf[7] = CRC16>>8; 
+    txBuf[5] = countSet;
    }
+   else
+     txBuf[5] = 0;
+   CRC16 = crc16(txBuf,6);
+   txBuf[6] = CRC16&0xFF;                                                       //CRC L
+   txBuf[7] = CRC16>>8; 
    USART1_put_string(txBuf,8);
    return 0;
 } 
