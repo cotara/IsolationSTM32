@@ -22,3 +22,7 @@ IAR_Project/Debug/Obj/User/modbus.o
 IAR_Project/Debug/Obj/User/user_ADC.o
 IAR_Project/Debug/Obj/User/user_GPIO.o
 IAR_Project/Debug/Obj/User/user_TIMER.o
+IAR_Project/Debug/BrowseInfo/User/modbus.pbi.dep
+IAR_Project/Nextion.dep
+IAR_Project/settings/Nextion.dnx
+IAR_Project/settings/nextion.wsdt
