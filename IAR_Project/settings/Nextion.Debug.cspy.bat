@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.general.xcl" --backend -f "C:\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.general.xcl" --backend -f "C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\settings\Nextion.Debug.driver.xcl" 
 
 @echo off 
 :end

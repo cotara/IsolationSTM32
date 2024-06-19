@@ -1,35 +1,39 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.32.2.340/W64 for ARM                  21/Feb/2024  15:24:20
+# IAR ELF Linker V9.32.2.340/W64 for ARM                  19/Jun/2024  15:23:01
 # Copyright 2007-2023 IAR Systems AB.
 #
-#    Output file  =  C:\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out
-#    Map file     =  C:\Ruslan\IAR\EX\IAR_Project\Debug\List\Nextion.map
+#    Output file  =
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out
+#    Map file     =
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\List\Nextion.map
 #    Command line =
-#        -f C:\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out.rsp
-#        (C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\eeprom.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\main.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\misc.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\modbus.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\startup_stm32f10x_hd.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_adc.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_dma.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_gpio.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_i2c.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\stm32f10x_it.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_rcc.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_tim.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_usart.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\system_stm32f10x.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_ADC.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_GPIO.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_TIMER.o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_USART.o --redirect
-#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        -f
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out.rsp
+#        (C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\eeprom.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\main.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\misc.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\modbus.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\startup_stm32f10x_hd.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_adc.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_dma.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_gpio.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_i2c.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\stm32f10x_it.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_rcc.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_tim.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\stm32f10x_usart.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std\system_stm32f10x.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_ADC.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_GPIO.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_TIMER.o
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User\user_USART.o
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --no_out_extension -o
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out --map
-#        C:\Ruslan\IAR\EX\IAR_Project\Debug\List\Nextion.map --config
-#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Exe\Nextion.out
+#        --map
+#        C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\List\Nextion.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\arm/config/linker/ST/stm32f103x6.icf" --semihosting --entry
 #        __iar_program_start --vfe --text_out locale --cpu=Cortex-M3
 #        --fpu=None)
@@ -286,13 +290,13 @@ command line/config:
     -------------------------------------------------
     Total:
 
-C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj: [1]
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj: [1]
     main.o                    2'344       44      168
     stm32f10x_it.o              648        8       53
     -------------------------------------------------
     Total:                    2'992       52      221
 
-C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std: [2]
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std: [2]
     misc.o                      120
     startup_stm32f10x_hd.o      552
     stm32f10x_adc.o             504
@@ -306,7 +310,7 @@ C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std: [2]
     -------------------------------------------------
     Total:                    4'194       20       20
 
-C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User: [3]
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User: [3]
     eeprom.o                    512
     modbus.o                    996        1       60
     user_ADC.o                  632                 8
@@ -651,9 +655,9 @@ vel_adc                 0x2000'0240    0x4  Data  Gb  stm32f10x_it.o [1]
 voltageADCValue         0x2000'0200    0x8  Data  Gb  stm32f10x_it.o [1]
 
 
-[1] = C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj
-[2] = C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std
-[3] = C:\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User
+[1] = C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj
+[2] = C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\STM32Std
+[3] = C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\Obj\User
 [4] = dl7M_tlf.a
 [5] = m7M_tl.a
 [6] = rt7M_tl.a

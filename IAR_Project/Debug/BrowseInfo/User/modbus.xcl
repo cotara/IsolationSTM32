@@ -1,21 +1,21 @@
-"C:\Ruslan\IAR\EX\IAR_Project\modbus.c"
+"C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\modbus.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi.dep
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi.dep
 -o
-C:\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\Debug\BrowseInfo\User\modbus.pbi
 -I
-C:\Ruslan\IAR\EX\IAR_Project
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project
 -I
-C:\Ruslan\IAR\EX\IAR_Project
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project
 -I
-C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\..\..\_libs\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc
 -I
-C:\Ruslan\IAR\EX\IAR_Project\..\..\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project\..\..\_libs\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include\
 -I
@@ -25,11 +25,11 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c
 -I
-C:\Ruslan\IAR\EX\IAR_Project
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\EX\IAR_Project
 -I
-C:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\_libs\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc
 -I
-C:\Ruslan\IAR\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src
+C:\Users\Redwill1\YandexDisk\REDWILL\Ruslan\IAR\_libs\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\src
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include
 -D__CHAR_BITS__=8
